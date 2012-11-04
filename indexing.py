@@ -18,6 +18,7 @@ def removeStopwords (line):
 			word = wnl.lemmatize(word)
 			important_words.append(word)
 	return important_words
+
 #---------------------------------------------------------------------#
 #Twitter converts all urls to http://t.co/<something>
 #this regular expression checks for all urls in a ling
@@ -55,6 +56,17 @@ def emphReplace(word):
 	return emphReplace(word)
 
 #---------------------------------------------------------------------#
+#checks if the tweet is a retweet
+#takes as input the raw tweet
+def isRetweet(tweet):
+	p = re.compile('([A-Za-z\ ]+\:)(\\t)(.*)')
+	t = m.group(3)
+	if (t[0]=='R' and t[1]=='T' and t[2]==' '):
+		return 1
+	else:
+		return 0
+
+#---------------------------------------------------------------------#
 #The following regular expression checks for three groups
 #name followed by a colon, a tab and finally the tweet
 p = re.compile('([a-z\ ]+\:)(\\t)(.*)',re.IGNORECASE)
@@ -63,6 +75,7 @@ for tweet in f:
 	m = p.match(tweet)
 	if m is not None:		#the file may contain invalid contents
 		print tweet
-		print removeStopwords(m.group(3))
+		print isRetweet(tweet)
+		#print removeStopwords(m.group(3))
 f.close()
 
