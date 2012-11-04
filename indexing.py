@@ -30,6 +30,19 @@ def urlCheck (line):
 #function to find emphasis on words by repetition of
 #letters
 
+def emphExist(line):
+	presence = 0
+	emp_regexp = re.compile(r'(\w*)(\w)\2(\w*)')
+	words = line.split()
+	for word in words:
+		if emp_regexp.match(word) is not None:
+			if wordnet.synsets(word):
+				continue
+			else:
+				presence = presence +1
+	return presence
+
+
 #replaces the word after removing repeated letters
 def emphReplace(word):
 	emp_regexp = re.compile(r'(\w*)(\w)\2(\w*)')
