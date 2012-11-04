@@ -24,9 +24,18 @@ def removeStopwords (line):
 #this regular expression checks for all urls in a ling
 #and return them as a list
 
-def urlCheck (line):
+def hasUrl (line):
 	u=re.compile('http\:\/\/t\.co\/[a-zA-Z0-9]+')
 	return u.findall(line)
+#---------------------------------------------------------------------#
+#function to chech the presence of a usename in the 
+#tweet
+
+def hasUsernames(line):
+	u=re.compile('\@[a-zA-Z0-9\_]+')
+	return u.findall(line)
+
+
 #---------------------------------------------------------------------#
 #function to find emphasis on words by repetition of
 #letters
@@ -75,7 +84,7 @@ for tweet in f:
 	m = p.match(tweet)
 	if m is not None:		#the file may contain invalid contents
 		print tweet
-		print isRetweet(tweet)
+		print hasUsernames(tweet)
 		#print removeStopwords(m.group(3))
 f.close()
 
