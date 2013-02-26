@@ -28,7 +28,7 @@ def hasUrl (line):
 	u=re.compile('http\:\/\/t\.co\/[a-zA-Z0-9]+')
 	return u.findall(line)
 #---------------------------------------------------------------------#
-#function to chech the presence of a usename in the 
+#function to check the presence of a username in the 
 #tweet
 
 def hasUsernames(line):
@@ -74,6 +74,20 @@ def isRetweet(tweet):
 		return 1
 	else:
 		return 0
+
+#---------------------------------------------------------------------#
+#checks for presence of profanity. Compares each word from file 'bad-words.txt'
+#expects a list of words
+def hasProfanity(words):
+	count = 0
+	f = open('bad-words.txt','r')
+	lis = []
+	for badword in f:
+		lis.append(badword.strip())
+	for badword in lis:
+		if badword in words:
+			count = count + 1
+	return count
 
 #---------------------------------------------------------------------#
 #The following regular expression checks for three groups
