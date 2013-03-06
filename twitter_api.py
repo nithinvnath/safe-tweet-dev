@@ -32,3 +32,7 @@ if api.me().name is not None:
 else:
 	print "Authentication failed!"
 
+pub = api.home_timeline()
+
+for tweet in pub:
+	print tweet.user.name + ":" + tweet.text

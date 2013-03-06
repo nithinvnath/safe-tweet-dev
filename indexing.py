@@ -30,6 +30,7 @@ def hasUrl (line):
 #---------------------------------------------------------------------#
 #function to check the presence of a username in the 
 #tweet
+#EDIT: Can be taken directly from the tweet obtained. A field exists
 
 def hasUsernames(line):
 	u=re.compile('\@[a-zA-Z0-9\_]+')
@@ -80,7 +81,7 @@ def isRetweet(tweet):
 #expects a list of words
 def hasProfanity(words):
 	count = 0
-	f = open('bad-words.txt','r')
+	f = open('./Corpus/bad-words.txt','r')
 	lis = []
 	for badword in f:
 		lis.append(badword.strip())
