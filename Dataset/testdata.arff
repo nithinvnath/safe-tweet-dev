@@ -1,0 +1,235 @@
+@RELATION safe-tweets
+
+%@ATTRIBUTE Tweet 	STRING
+@ATTRIBUTE hasUrl 	 NUMERIC 
+@ATTRIBUTE verifiedUser 	 NUMERIC 
+@ATTRIBUTE Mentions 	 NUMERIC 
+@ATTRIBUTE Emphasis 	 NUMERIC 
+@ATTRIBUTE Retweet 	 NUMERIC 
+@ATTRIBUTE Profanity 	 NUMERIC 
+@ATTRIBUTE Explicit 	 NUMERIC 
+@ATTRIBUTE HateSpeech 	 NUMERIC 
+@ATTRIBUTE class 	{Safe, Unsafe}
+
+@DATA
+0,0,1,2,1,0,0,0,Safe
+0,0,1,1,1,0,0,0,Safe
+0,0,1,2,1,0,0,0,Safe
+0,0,1,2,1,0,0,0,Unsafe
+0,0,0,0,0,0,0,0,Safe
+0,0,1,1,1,0,0,0,Safe
+SirVince_: By anyone, I mean people smaller than he is.,0,0,0,0,0,0,0,0,Safe
+SirVince_: But a fuckboy is willing to fight "anyone" to not lose his girl.,0,0,0,0,0,1,0,0,Unsafe
+SirVince_: #DolphinsNation lololololol,0,0,0,0,0,0,0,0,Safe
+SirVince_: I would like a black girl.,0,0,0,0,0,0,0,0,Safe
+SirVince_: 😛 Ditto is in my emojis,0,0,0,0,0,0,0,0,Safe
+SirVince_: 👪,0,0,0,0,0,0,0,0,Safe
+SirVince_: @amiamiley my faulty pornographic films,0,0,1,0,0,0,0,0,Unsafe
+SirVince_: Vettes are cool http://t.co/Ws16wSQ0yn,0,0,0,2,0,0,0,0,Safe
+SirVince_: You guys dont realize how good the iPhone 5 camera is,0,0,0,0,0,0,0,0,Safe
+SirVince_: Have you ever featured in any porns? @amiamiley,0,0,1,0,0,0,1,0,Unsafe
+SirVince_: Hi Mr. Helicopter, did you come to watch me train? http://t.co/OxoYuVIwx0,0,0,0,1,0,0,0,0,Safe
+SirVince_: Might be getting 2 new Jiu Jitsu students if they dont loaf.,0,0,0,0,0,0,0,0,Safe
+SirVince_: I wanna work on Taekwondo kicks. Theyre tough as fuck,0,0,0,1,0,1,1,0,Unsafe
+SirVince_: @DJTelly_ 👏👏👏👏👏👏,0,0,1,0,0,0,0,0,Safe
+RacistUsers: RT @TheWonton_: This nigga has a tat on his chest, he is not muscular or anything. He is a stupid skinny white boy.,0,0,0,0,1,0,0,2,Unsafe
+RacistUsers: RT @chingchow6: Fuck it your not jumping my boy! Stupid fucking niggers can't fight one on one. Well take care of ur face marquis,0,0,1,0,1,0,1,1,Unsafe
+RacistUsers: RT @jperez420: attention stupid niggers. ok how about you pussy bitchs fight somone 1 on 1? y do you suspected somones gonna fight you a ...,0,0,1,2,1,2,1,2,Unsafe
+RacistUsers: RT @TheRealCJones: Dumb white bitch...smell like fish & shit! RT "@kaitlynreann_: Some black people smell like the freaking zoo. #Gross",0,0,1,1,1,2,1,1,Unsafe
+RacistUsers: RT @Jonkane135: "@SchwartzKenny: Not trying to be mean but most black people really fucking smell" so true,0,0,1,1,1,0,1,0,Unsafe
+RacistUsers: RT @TooflessTerror: “@Nadin_Ismail: @FUCKIPEDIA leave Iraq alone , the jokes you tweet about them are as lame as fuck .” crybaby ass raghead,0,0,1,0,1,1,1,0,Unsafe
+RacistUsers: RT @Freedabodmon: @Nadin_Ismail shut the fuck up you smmelly raghead go worship allah and kill yourself,0,0,1,1,1,1,1,0,Unsafe
+RacistUsers: RT @will__chandler: I can't wait to get back to lying in a dusty trench being shot at by some raghead #theinbetweeners,0,0,1,0,1,0,0,0,Unsafe
+RacistUsers: RT @Boss_Guero: Just makes me wana kill every raghead I see,0,0,1,0,1,0,0,0,Unsafe
+RacistUsers: RT @_roberthall: Mixed people confuse me. You black, or white?,0,0,1,0,1,0,0,0,Unsafe
+RacistUsers: RT @agent_benton: “@Katt__Williams White People golf clap, Asian people jump up and down cheering, Mexican People whistle real loud, Bla ...,0,0,1,1,1,0,0,0,Unsafe
+RacistUsers: RT @sickipediabot: God has a brilliant sense of humour! Giving all them African people great white teeth yet giving them nothing to smil ...,0,0,1,0,1,0,0,0,Unsafe
+RacistUsers: RT @FuckMariaa: Omfg the white people at this taco shop can't control their kids. Running around, Climbing on the tables & crying nshit  ...,0,0,1,0,1,0,0,0,Unsafe
+RacistUsers: RT @kidbbm: I want love like them white people on The Notebook lol,0,0,0,0,1,0,0,0,Unsafe
+RacistUsers: RT @NowChangeItBack: #ireallymiss when white people could participate in racial jokes. black people have got a monopoly on race jokes th ...,0,0,1,0,1,0,0,0,Unsafe
+RacistUsers: RT @yo_tempy: White people are annoying.,0,0,1,1,1,0,0,0,Unsafe
+RacistUsers: RT @Swollrosita: ppl eating chicken with a knife and fork? wats up wid that?  stupid white people.,0,0,1,1,1,0,0,0,Unsafe
+RacistUsers: RT @meshaababyy1: ha in social studies , tyson was like im tired of learning bout these white people 11 months out of the year .,0,0,1,0,1,0,0,0,Unsafe
+tylerfitzpatrik: @janderson246 ur an exception cutie pie ;),0,0,1,0,0,0,0,0,Safe
+tylerfitzpatrik: #YoureMoreAttractiveIf you are not a nigger,0,0,0,0,0,0,0,1,Unsafe
+tylerfitzpatrik: @MollyDufresne damn who's that beautiful kid?,0,0,1,0,0,0,0,0,Safe
+tylerfitzpatrik: For all of those in a bad mood. This will cheer you up http://t.co/JfOYblaTlO,0,0,0,2,0,0,0,0,Safe
+tylerfitzpatrik: @zackkliska &gt;,0,0,1,0,0,0,0,0,Safe
+tylerfitzpatrik: @jessewebb285 mmmhhhmmm,0,0,1,1,0,0,0,0,Safe
+tylerfitzpatrik: @jessewebb285 both ;),0,0,1,0,0,0,0,0,Safe
+tylerfitzpatrik: @jessewebb285 ill lick your tits. That will be a good day,0,0,1,0,0,0,1,0,Unsafe
+tylerfitzpatrik: Starting the day off with some tswift #goodday,0,0,0,0,0,0,0,0,Safe
+tylerfitzpatrik: #NASCAR and he takes a left turn.,0,0,0,0,0,0,0,0,Safe
+tylerfitzpatrik: @Brad__Beaulieu @rpeters26 if it wasnt for us u would have got stuck #JustSaying,0,0,1,0,0,0,0,0,Safe
+tylerfitzpatrik: @Brad__Beaulieu super,0,0,1,0,0,0,0,0,Safe
+tylerfitzpatrik: RT @Adam__Corey: Hopefully they lock the storage closets at the dance tomorrow #ifyouknowhatimean,0,0,1,0,1,0,0,0,Safe
+tylerfitzpatrik: @jakedurks it may make an appearance ;),0,0,1,0,0,0,0,0,Safe
+tylerfitzpatrik: Getting ready to go banana sandwich tomorrow,0,0,0,0,0,0,0,0,Safe
+tylerfitzpatrik: #tbt fuck with us http://t.co/gsBshQnQOZ,0,0,0,1,0,1,1,0,Unsafe
+tylerfitzpatrik: @z_downey8 @adam__corey that's fucked up,0,0,1,0,0,0,1,0,Unsafe
+tylerfitzpatrik: Spirit week #embracethegrind,0,0,0,0,0,0,0,0,Safe
+tylerfitzpatrik: Bitches best be ready for what me and @rpeters26 are bringing tomorrow.,0,0,1,1,0,0,0,0
+tylerfitzpatrik: Fuck ya. Quinlin doing work #barn,0,0,0,0,0,0,0,0,Unsafe
+Mobzzzx_: I miss you.,0,0,0,0,0,0,0,0,Safe
+Mobzzzx_: block this number for @kelljohnson 07720547634 wishing cancer on someone is sick.,0,0,1,1,0,0,0,0,Safe
+Mobzzzx_: maybe justin bieber was late to his concert because he picked up a mayo chicken for 99p,0,0,0,1,0,0,0,0,Safe
+Mobzzzx_: next 10 people follow her @D3annaOmg will get a shoutout,0,0,1,0,0,0,0,0,Safe
+Mobzzzx_: Most girls - " When my bra matches my underwear I really feel like I have my life together ",0,0,0,0,0,0,0,0,Safe
+Mobzzzx_: We all hate @immo_stanley for leaving me to walk on my own:(,0,0,1,0,0,0,0,0,Safe
+Mobzzzx_: This weather is officially fucked.,0,0,0,0,0,0,1,0,Unsafe
+Mobzzzx_: Happy birthday bro #brotherlove,0,0,0,0,0,0,0,0,Safe
+Mobzzzx_: @proct3r i hope not haha!!,0,0,1,0,0,0,0,0,Safe
+Mobzzzx_: They always seem to pop up the cunts http://t.co/0SC8EfGjlU,0,0,0,1,0,0,1,0,Unsafe
+Mobzzzx_: Monday tomorrow 😣😣😣 http://t.co/WUfXGs4Shw,0,0,0,1,0,0,0,0,Safe
+Mobzzzx_: Joey and Sam are just so cute,0,0,0,0,0,0,0,0,Safe
+Mobzzzx_: love you joey,0,0,0,0,0,0,0,0,Safe
+Mobzzzx_: Does anyone else ever wake up in the middle of the night extremely thirsty and water tastes like it came from heaven?,0,0,0,0,0,0,0,0,Safe
+Mobzzzx_: Charging your phone in the car is the best.,0,0,0,0,0,0,0,0,Safe
+Mobzzzx_: Why is it snowing omg,0,0,0,0,0,0,0,0,Safe
+Mobzzzx_: Busy dayyyy today,0,0,0,1,0,0,0,0,Safe
+Mobzzzx_: Next 10 people follow @D3annaOmg will get a shoutout from me!!,0,0,1,0,0,0,0,0,Safe
+Mobzzzx_: 10 more people follow @D3annaOmg for me she's nearly on 1K!!,0,0,1,0,0,0,0,0,Safe
+Mobzzzx_: RT @D3annaOmg: Of course your 'just friends',0,0,1,0,1,0,0,0,Safe
+jpereznugga: @Lil_BooBoo98 alright hmu sometime :),0,0,1,0,0,0,0,0,Safe
+jpereznugga: @Lil_BooBoo98 ... i wouldnt have told you to talk to me if i didnt want you too,0,0,1,0,0,0,0,0,Safe
+jpereznugga: @Lil_BooBoo98 i never said that?!,0,0,1,0,0,0,0,0,Safe
+jpereznugga: @Lil_BooBoo98 start talking to me again!,0,0,1,0,0,0,0,0,Safe
+jpereznugga: @Lil_BooBoo98 that is true xD,0,0,1,0,0,0,0,0,Safe
+jpereznugga: @Lil_BooBoo98 why dont wee?,0,0,1,1,0,0,0,0,Safe
+jpereznugga: im bored asss sshhiiitttttttttttt,0,0,0,1,0,0,1,0,Unsafe
+jpereznugga: Was at the park earlier! http://t.co/4l8Nx8GerA,1,0,0,1,0,0,0,0,Safe
+jpereznugga: RT @realjknoxville: Happy 20th anniversary to Beavis and Butthead and @MikeJudge. Follow him for sure. Knox xoxoxo,0,0,1,1,1,0,0,0,Safe
+jpereznugga: @FapFapSplat @EllaShaye97 god damn ella get it right,0,0,1,1,0,0,0,0,Safe
+jpereznugga: today was pretty great chilled with some goons for a few mins den drove for a while!,0,0,0,0,0,0,0,0,Safe
+jpereznugga: @EllaShaye97 @FapFapSplat xD,0,0,1,0,0,0,0,0,Safe
+jpereznugga: RT @EllaShaye97: @jpereznugga because I went snowmobiling. I don't like black males. Sorry @FapFapSplat,0,0,1,0,1,0,0,0,Safe
+jpereznugga: @EllaShaye97 BECAUSE SHE HAS SEX WITH BLACK GUYS,0,0,1,0,0,0,0,0,Unsafe
+jpereznugga: i need a robot,0,0,0,0,0,0,0,0,Safe
+jpereznugga: RT @ScottyScreaming: @EllaShaye97 @jpereznugga tumblr is soooooo gay. that is why I have one,0,0,1,1,1,1,0,0
+jpereznugga: @EllaShaye97 no i was just saying tumblr is gay as fuck if i had one tho it would just be all naked people and shit,0,0,1,0,0,2,2,0,Unsafe
+jpereznugga: ass ass ass ass ass ass #bigsean,0,0,0,0,0,0,0,0,Safe
+jpereznugga: @EllaShaye97 no i dont?,0,0,1,0,0,0,0,0,Safe
+jpereznugga: gross... gingers,0,0,0,1,0,0,0,0,Safe
+Phurley49: @b0ss561 tiger woods based woody Allen's dick,0,0,1,1,0,0,1,0,Unsafe
+Phurley49: #Rare,0,0,0,0,0,0,0,0,Safe
+Phurley49: #TaskForce,0,0,0,0,0,0,0,0,Safe
+Phurley49: I h8 toe hounds,0,0,0,0,0,0,0,0,Safe
+Phurley49: Seriously doe,0,0,0,0,0,0,0,0,Safe
+Phurley49: Fuxk u shithead assnigger copying fuk dick head ass slob #retard fuck z,0,0,0,1,0,2,3,1,Unsafe
+Phurley49: I try to message @LILBTHEBASEDGOD at least once a day,0,0,1,0,0,0,0,0,Safe
+Phurley49: 2 minutes ago it was 420 am,0,0,0,0,0,0,0,0,Safe
+Phurley49: Happy wars @PThor2994,0,0,1,0,0,0,0,0,Safe
+Phurley49: RT @Ebony_Ethan: Stop saying clutch,0,0,1,0,1,0,0,0,Safe
+Phurley49: RT @Ebony_Ethan: Nature lizard milk,0,0,1,0,1,0,0,0,Safe
+Phurley49: #INMYMOUTH,0,0,0,0,0,0,0,0,Safe
+Phurley49: Thank u based god,0,0,0,0,0,0,0,0,Safe
+Phurley49: Beagle scout,0,0,0,0,0,0,0,0,Safe
+Phurley49: #WORKAHOLICS,0,0,0,0,0,0,0,0,Safe
+Phurley49: RT @UncleBlazer: Advanced Drinkin and Dragin #Workaholics,0,0,1,0,1,0,0,0,Safe
+Phurley49: RT @UncleBlazer: Watch #WORKAHOLICS tonight it's hella motherfucking cute.,0,0,1,1,1,1,0,0,Safe
+Phurley49: #MirrorPicMonday http://t.co/ENDgsmH8It,0,0,0,1,0,0,0,0,Safe
+Phurley49: Gramps DeMamp,0,0,0,0,0,0,0,0,Safe
+Phurley49: Not an asshole just don't give a fuck a lot,0,0,0,0,0,2,1,0,Unsafe
+Tour3tt3s: tits queef j-j - female genitalia sexual act brotherfucker fuckhead,0,0,0,1,0,1,2,0,Unsafe
+Tour3tt3s: douche cockburger prick dike shitter,0,0,0,0,0,3,2,0,Unsafe
+Tour3tt3s: assshit muff gaylord,0,0,0,1,0,2,1,0,Unsafe
+Tour3tt3s: dyke faggit,0,0,0,1,0,2,0,0,Unsafe
+Tour3tt3s: fuckwitt #cockmonkey idiot dickweed,0,0,0,2,0,2,0,0,Unsafe
+Tour3tt3s: idiot shitdick #dicksucking cockface asshead homosexual,0,0,0,1,0,4,1,0,Unsafe
+Tour3tt3s: cumtart cockfucker faggot mothafucka,0,0,0,0,0,4,0,0,Unsafe
+Tour3tt3s: idiot dickwad #shitcunt homosexual,0,0,0,0,0,2,0,0,Unsafe
+Tour3tt3s: vaginal fart. polesmoker dago dick,0,0,0,0,0,1,1,1,Unsafe
+Tour3tt3s: cocksmith homosexual homosexual,0,0,0,0,0,1,0,0,Unsafe
+Tour3tt3s: queerbait homo schlong #dick gaylord homosexual,0,0,0,1,0,3,3,0,Unsafe
+Tour3tt3s: fuckup hairpie,0,0,0,0,0,1,0,0,Unsafe
+Tour3tt3s: #bitchtits idiot feltch,0,0,0,0,0,1,1,0,Unsafe
+Tour3tt3s: male genitalia fuckface penispuffer assmonkey cumbubble,0,0,0,3,0,4,0,0,Unsafe
+Tour3tt3s: #whore shitty cumslut pirate - homosexual poon,0,0,0,0,0,2,2,0,Unsafe
+Tour3tt3s: ho bollox dirty girl cockmaster bitchy,0,0,0,1,0,2,1,0,Unsafe
+Tour3tt3s: tits twatlips,0,0,0,0,0,1,1,0,Unsafe
+Tour3tt3s: muff feltch idiot cooter kootch fucknutt,0,0,0,2,0,1,4,0,Unsafe
+Tour3tt3s: pissed coochy,0,0,0,1,0,0,2,0,Unsafe
+Tour3tt3s: #hoe buttfucker #dumshit sperm,0,0,0,1,0,2,0,0,Unsafe
+sexymilfsite: Bride and cheating wife for your pleasure, find and fuck her on http://t.co/pRgLOrMsQk    PIC48 http://t.co/9k8jiLYhN6,1,0,0,2,0,1,1,0,Unsafe
+CNN: RT @PiersMorganLive: Next, #Pope, supersized sodas &amp; #LeaningIn. Some of the topics we're covering w/ @christinecquinn &amp; our sla ...,0,1,1,0,1,0,0,0,Safe
+CNN: RT @andersoncooper: Is it possible an American will be elected Pope? We will go over the front runners live from #Rome @ac360 8pm,0,1,1,0,1,0,0,0,Safe
+CNN: RT @piersmorgan: Tonight the show formerly known as Piers Morgan Tonight gets a new name - @PiersMorganLive CNN 9pmET.,0,1,1,1,1,0,0,0,Safe
+CNN: RT @AC360: See what happens during the secretive conclave to choose a new pope http://t.co/ZjAg0j2RHy @andersoncooper is in Rome at 8 &a ...,1,1,1,1,1,0,0,0,Safe
+CNN: RT @OutFrontCNN: North Korea scraps armistice amid heightened saber rattling -- Ret. Gen. Jim Jones joins @ErinBurnett 7p ET Has Kim Jon ...,0,1,1,0,1,0,0,0,Safe
+CNN: U.S. Marines told to "save every round, every gallon of gas" due to spending cuts: http://t.co/oaiqFnLc4a,1,1,0,1,0,0,0,0,Safe
+CNN: RT @camanpour: My tribute to some of the world’s most courageous #women: http://t.co/oOevZWVQGY,1,1,1,1,1,0,0,0,Safe
+CNN: RT @TheLeadCNN: Rehearsals all week! #theLeadCNN http://t.co/fZiJtPhYrn",1,1,1,2,1,0,0,0,Safe
+CNN: State judge invalidates upcoming NYC ban on large sugary drinks - city will appeal: http://t.co/9Q7kOSzzhs,1,1,0,2,0,0,0,0,Safe
+CNN: RT @andersoncooper: I'm in Rome for a few days to cover the start of the conclave. Will be live from here on @ac360 at 8pm and 10pm,0,1,1,0,1,0,0,0,Safe
+CNN: U.S. expels 2 Venezuelan diplomats - two U.S. officials were expelled from Venezuela last week: http://t.co/aLY3pPUDXq,1,1,0,2,0,0,0,0,Safe
+CNN: Ex-Detroit Mayor Kwame Kilpatrick convicted in corruption case - faces up to 20 years in prison: http://t.co/ZbCHGlAsp9,1,1,0,1,0,0,0,0,Safe
+CNN: India gang rape suspect found dead in jail cell - police say suicide; parents allege murder: http://t.co/vhI8oNjZps,1,1,0,1,0,0,0,0,Safe
+CNN: RT @CNNPR: CNN's @chriscuomo &amp; @andersoncooper lead the network's complete coverage of the Papal #Conclave. Full details here: http: ...,0,1,1,2,1,0,0,0,Safe
+CNN: Six teens killed, two injured when overcrowded SUV flips into pond: http://t.co/J0UEFMj8ai,1,1,0,2,0,0,0,0,Safe
+CNN: RT @cnnbrk: Several #NATO and Afghan troops killed in latest insider attack, NATO says. http://t.co/fdjRzxzeez,1,1,1,2,1,0,0,0,Safe
+CNN: What are solutions for healthcare consumers? @DrSanjayGupta explains how you can save money by negotiating medical bills down - now on @CNN.,0,1,1,0,0,0,0,0,Safe
+CNN: Why don't insurance companies pay primary care doctors more? @DrSanjayGupta asks the head of United Healthcare. 10 p.m. ET #RescueHealthcare,0,1,1,0,0,0,0,0,Safe
+CNN: RT @susancandiotti: Tune in now: ESCAPE FIRE Debut of CNN Films  Examining healthcare like you haven't seen b4 http://t.co/CpXsA2YzX6 8p ...,1,1,1,2,1,0,0,0,Safe
+CNN: RT @OutFrontCNN: Exposing the problems with the U.S. health care system - @EscapeFire tonight at 8 p.m. and Sanjay Gupta: MD at 10 p.m.  ...,0,1,1,0,1,0,0,0,Safe
+SlightlyTempt: @24_7_Juan_Kerr @toniglam she looks like shes having fun,0,0,1,0,0,0,0,0,Safe
+SlightlyTempt: @24_7_Juan_Kerr its exactly what i want,0,0,1,0,0,0,0,0,Safe
+SlightlyTempt: @CamWithMeganTS hey sexy, do u escort?,0,0,1,0,0,0,0,0,Unsafe
+SlightlyTempt: @brian11880 i have never had penetrative sex with one but have stroked and sucked one off as she recipricated with me! u?,0,0,1,0,0,0,0,0,Unsafe
+SlightlyTempt: @Katy_Pussy_Lick good girl,0,0,1,0,0,0,0,0,Unsafe
+SlightlyTempt: @Foxxy702 cheeky smile there sexy, ud have the same smile on your face if i was eimming you and massaging your cock with my saliva!,0,0,1,1,0,0,1,0,Unsafe
+SlightlyTempt: @maxandmeganxxx hot pic, id like to taste u both as u cum,0,0,1,0,0,0,2,0,Unsafe
+SlightlyTempt: @WeRCuckoldCpl u have an amazing body, id like to taste ur ass as you get fucked by your partner! i might even taste the cum as it drips,0,0,1,0,0,0,3,0,Unsafe
+SlightlyTempt: my ass is craving a hard #shemale cock,0,0,0,0,0,0,2,0,Unsafe
+SlightlyTempt: sucking his cock and licking his ass before getting his #prostate massaged - u lucky lucky bastard http://t.co/MvoobMWGFz,0,0,0,1,0,0,1,1,Unsafe
+SlightlyTempt: hot dirty the way it should be #strapon action - i need this http://t.co/Q8CEWO0Tia,0,0,0,1,0,0,0,0,Unsafe
+SlightlyTempt: @chetmanly86 u can fuck her as i suck her dick,0,0,1,0,0,1,2,0,Unsafe
+SlightlyTempt: @ladyboylovers me too,0,0,1,0,0,0,0,0,Unsafe
+SlightlyTempt: hot #tranny http://t.co/1eADONWymO,0,0,0,1,0,0,0,0,Unsafe
+SlightlyTempt: i wanna suck that dick #shemale http://t.co/6cSLjRqdbu,0,0,0,2,0,0,2,0,Unsafe
+SlightlyTempt: @stellar12345 @TiaLayneXXX but would you strapon fuck one? and by one i mean me?,0,0,1,0,0,1,1,0,Unsafe
+SlightlyTempt: @OBrookeBlue would you massage my prostate with your fist?,0,0,1,0,0,0,0,0,Unsafe
+SlightlyTempt: @MistressSaphire do u strapon fuck?,0,0,1,0,0,1,1,0,Unsafe
+SlightlyTempt: @Cuckformywife would love to see some pics,0,0,1,0,0,0,0,0,Unsafe
+SlightlyTempt: simply beautiful #tranny #tgirl http://t.co/6fMH1fA3XT,0,0,0,1,0,0,0,0,Unsafe
+BillGates: Couldn't agree more with these UK CEOs, aid IS a smart investment: http://t.co/QOp4gHnmm5,1,1,0,1,0,0,0,0,Safe
+BillGates: Cool visualizations show how digital &amp; physical worlds are coming together. From @Microsoft http://t.co/hBW1cGgyfZ,1,1,1,1,0,0,0,0,Safe
+BillGates: RT @melindagates: Join me on @wecatapult and help unlock the amazing potential of #girlsandwomen around the world: http://t.co/9hPHFqhAJ ...,0,1,1,1,1,0,0,0,Safe
+BillGates: .@MelindaGates: “Disruption can be a positive—even vital—catalyst for change.” Join the TEDx on 4/3/13: http://t.co/Ghug6ZG6k8,1,1,1,1,0,0,0,0,Safe
+BillGates: Often lost in the debate about GMOs is the need for poor farmers to have choices in the face of hard conditions. http://t.co/BCmd7Ukee1,1,1,0,1,0,0,0,0,Safe
+BillGates: RT @JeffDSachs: .@BillGates has written an excellent critique of Why Nations Fail by Acemoglu and Robinson.  http://t.co/94pJj4DGow,1,1,1,1,1,0,0,0,Safe
+BillGates: @jaredmysko - we had to leave before the match was over, but the blue team was up by a point.,0,1,1,0,0,0,0,0,Safe
+BillGates: Answering students’ questions @UTAustin starting in 45 minutes. Should be fun! http://t.co/BQg7mRWEzw,1,1,1,1,0,0,0,0,Safe
+BillGates: A robot soccer match at UT Austin - very exciting! http://t.co/a9lWny5Cho,0,1,0,1,0,0,0,0,Safe
+BillGates: I'm @UTAustin to meet with students and learn about #edtech innovations. Watch my Q&amp;A at 1pm PST:  http://t.co/BQg7mRWEzw,1,1,1,2,0,0,0,0,Safe
+BillGates: Teachers: @SkypeClassroom is giving you free Group Video Calling to celebrate World Read Aloud Day.  http://t.co/XEgbNn3Dch #WRAD,1,1,1,1,0,0,0,0,Safe
+BillGates: “Why Nations Fail” tries to explain why some nations succeed &amp; others don’t. I'm not sure the book succeeds. Why? http://t.co/uZBxVs9waw,1,1,0,2,0,0,0,0,Safe
+BillGates: Why keep fighting Polio? Success has benefits for so many across the global health spectrum. Read why in my Op-Ed: http://t.co/hrvmLiWtH9,1,1,0,1,0,0,0,0,Safe
+BillGates: Still work  to do, but I'm incredibly optimistic when it comes to Africa. Great progress as seen in @TheEconomist: http://t.co/IQcRDneCDf,1,1,1,1,0,0,0,0,Safe
+BillGates: RT @MikeBloomberg: Ending polio will protect future generations and pave the way for other life-saving interventions http://t.co/RX0dMd4 ...,0,1,1,1,1,0,0,0,Safe
+BillGates: I couldn’t be more excited to have @MikeBloomberg on board to help #EndPolio. http://t.co/mQU8tiBwQf,1,1,1,1,0,0,0,0,Safe
+BillGates: Ground breaking innovation makes the world a better place, witnessed on my visit to Dean Kamen’s lab. PHOTOS: http://t.co/BZiR55BYUB,1,1,0,1,0,0,0,0,Safe
+BillGates: Bono asks us all to become "factivists" at TED.  I'm in!  #ted2013 http://t.co/hwLnEDjmQi,0,1,0,1,0,0,0,0,Safe
+BillGates: .@codeorg gets my passion for computer programming education. A cool video:  http://t.co/57l4ZjtcoG #CODE,1,1,1,1,0,0,0,0,Safe
+BillGates: #Polio is 99% eradicated. Join me &amp; @FCBarcelona as we work to finish the job and #EndPolio. VIDEO: http://t.co/Vp9TgymrIg,1,1,1,2,0,0,0,0,Safe
+: RT @Whoozley: This about sums it up for me: http://t.co/2eRBM0DL9N,0,0,1,1,1,0,0,0,Safe
+: @icpcamritapuri Team SIGSEGV unable to login! Error message: http://t.co/5PUvGv16 (not even our id),1,0,1,2,0,0,0,0,Safe
+: RT @bomanirani: Watching yuvi's mom smiling is a moment to cherish. Cricket is like the theatre of life!!,0,0,1,0,1,0,0,0,Safe
+: @bedazzledknight :D Satyam... but overall, standard kuranju...,0,0,1,1,0,0,0,0,Safe
+: @bedazzledknight You watch it :P I can give the links :D,0,0,1,0,0,0,0,0,Safe
+: @bedazzledknight I watched too. Saw 2 episodes of #HIMYM. Its starting to get boring :-/ Nice twist at the end of 2nd episode though,0,0,1,1,0,0,0,0,Safe
+: @bedazzledknight Castle? :P,0,0,1,0,0,0,0,0,Safe
+: @bedazzledknight Ha! Im pretty sure of what's real and what's not. The voice in my head says its real :P,0,0,1,0,0,0,0,0
+: @bedazzledknight I have to confess. They are real. I just told u to make u feel better.
+Poor u sitting there n creating imaginary people :P,0,0,1,2,0,0,0,0,Safe
+: @bedazzledknight :D Sometimes keeping a low profile helps,0,0,1,0,0,0,0,0,Safe
+: @bedazzledknight Yea! Like I said, nobody really noticed :P,0,0,1,0,0,0,0,0,Safe
+: @shamilcm nice :),0,0,1,0,0,0,0,0,Safe
+: RT @funnyoneliners: When choosing a path in life, try to avoid the psychopaths.
+RT @avi1111,0,0,1,0,1,0,0,0,Safe
+: @pranavashok totally awesome!! :D,0,0,1,0,0,0,0,0,Safe
+: RT @pranavashok: Have 2 see 2 believe YouTube #epicness. Jack Black gets his Kung Fu Panda 2 on! http://t.co/HmCAFS8,1,0,1,1,1,0,0,0,Safe
+: RT @Disney: Integrity can be found in the smallest of gestures. http://di.sn/4j #Aladdin,0,0,1,1,1,0,0,0,Safe
+: RT @priyankachopra: Oh my god! What a show of class Team India! The world cup awaits you in Mumbai! Can you hear the unified sound of pu ...,0,0,1,0,1,0,0,0,Safe
+: Join me at the Firefox 4 Twitter Party and celebrate the newest version #fx4 #teamfirefox http://t.co/qvUB9lG via @firefox,1,0,1,1,0,0,0,0,Safe
+: RT @ShashiTharoor: At gym today,watched a bit of doughty Somdev holding his own vs Nadal. Defeat 7-5 6-4 no disgrace. He's a battler all ...,0,0,1,0,1,0,0,0,Safe
+: http://www.google.com/crisisresponse/japanquake2011.html Japan quake,0,0,0,1,0,0,0,0,Safe

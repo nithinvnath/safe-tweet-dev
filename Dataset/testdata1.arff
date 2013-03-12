@@ -1,0 +1,133 @@
+@RELATION safe-tweets
+
+@ATTRIBUTE hasUrl 	 NUMERIC 
+@ATTRIBUTE verifiedUser 	 NUMERIC 
+@ATTRIBUTE Mentions 	 NUMERIC 
+@ATTRIBUTE Emphasis 	 NUMERIC 
+@ATTRIBUTE Retweet 	 NUMERIC 
+@ATTRIBUTE Profanity 	 NUMERIC 
+@ATTRIBUTE Explicit 	 NUMERIC 
+@ATTRIBUTE HateSpeech 	 NUMERIC 
+@ATTRIBUTE class 	{Positive, Negative}
+
+@DATA
+
+UnfuckableFuck: I can commit. Louis and I have been hanging and banging for almost 4 years #truelove #LouisVuitton #bitcheslovepurses,0,0,0,1,0,0,0,0
+UnfuckableFuck: Retail therapy always cures the Monday  blues #SSP,0,0,0,0,0,0,0,0
+UnfuckableFuck: I have longer relationships with clothes than I do with people #undateable,0,0,0,0,0,0,0,0
+UnfuckableFuck: I wish every guy I slept with would develop amnesia so they stop stalking me,0,0,0,0,0,0,0,0
+UnfuckableFuck: Give my fucking hour back, whore,0,0,0,0,0,1,1,0
+UnfuckableFuck: RT @TruthByME: @UnfuckableFuck I feel like this would be a good response. http://t.co/spKkXviuHX,0,0,1,1,1,0,0,0
+UnfuckableFuck: #OMGAH http://t.co/uyTglTp0IX,0,0,0,1,0,0,0,0
+UnfuckableFuck: @likeanerdd I totally agree but how do you say your name is it just "s peace" or "assss piece"? lol,0,0,1,0,0,0,1,0
+UnfuckableFuck: I haven't practiced any kind of religion except for eating,0,0,0,0,0,0,0,0
+UnfuckableFuck: Threesome with Justin Timberlake and Adam Levine &gt;&gt;&gt;,0,0,0,0,0,0,0,0
+UnfuckableFuck: Unfortunately you still exist and fortunately we're still not compatible,0,0,0,0,0,0,0,0
+UnfuckableFuck: I'm the best thing you'll never have,0,0,0,0,0,0,0,0
+UnfuckableFuck: Your bitch, she so thirsty,0,0,0,0,0,2,0,1
+UnfuckableFuck: Let me tell you about a recent place I visited #rockbottom #unfuckable,0,0,0,0,0,0,0,0
+UnfuckableFuck: Nice Christian Audigier hoodie, douchebagel #unfuckable,0,0,0,1,0,0,0,0
+UnfuckableFuck: You don't gotta go home but you can't stay here #unfuckable,0,0,0,1,0,0,0,0
+UnfuckableFuck: RT @Silly__Brunette: 15 year olds need to stop RTing my dirty tweets it makes me uncomfortable,0,0,1,0,1,0,0,0
+UnfuckableFuck: RT @ExtraGrumpyCat: OMG THIS ACTUALLY WORKS!!!
+1): Hold your breath for 5 minutes
+2): Die,0,0,1,0,1,0,0,0
+UnfuckableFuck: @PrettyLilGeek that's not Boston last time I checked a map,0,0,1,0,0,0,0,0
+UnfuckableFuck: Where is everyone tonight? #Boston,0,0,0,0,0,0,0,0
+RightSideNews: Right Side News Syria: Obama Administration is Arming–and Training Militarily?–Radical Islamists: In ... http://t.co/NsivWVPY4q breaking,1,0,0,1,0,0,0,0
+RightSideNews: Right Side News Syria: Obama Administration is Arming–and Training Militarily?–Radical Islamists: In a new dev... http://t.co/NsivWVPY4q,1,0,0,1,0,0,0,0
+RightSideNews: http://t.co/x3CN2jhVUV... http://t.co/cRmdusSKe9,1,0,0,2,0,0,0,0
+RightSideNews: Right Side News Al Qaeda Threat to U.S. Not Diminished, Data Indicates: Conventional wisdom holds that the thr... http://t.co/AyzqNdMPzo,1,0,0,1,0,0,0,0
+RightSideNews: Right Side News Former Secret Service Agent Calls White House Tour Shutdown "Naked, Petty Politics": Dan Bongi... http://t.co/W5ox2HkrGH,1,0,0,1,0,0,0,0
+RightSideNews: Right Side News Immigration Reform News and Impact on US Homeland Security March 11, 2013: Right Side News rep... http://t.co/QB3M7EpTaP,1,0,0,2,0,0,0,0
+RightSideNews: http://t.co/tXOERvRONP... http://t.co/LhqceeNdi9,1,0,0,2,0,0,0,0
+RightSideNews: I just found all my 73 non followers thanks to http://t.co/JA3RwlP7Zl,1,0,0,1,0,0,0,0
+RightSideNews: Right Side News The War Against Bradley Manning and All Who Speak Out Against Injustice: 
+“The w... http://t.co/FluuPgQFVM breaking news,1,0,0,1,0,0,0,0
+RightSideNews: Right Side News Paying for Care: If you were eating in a Chinese restaurant, would you have the temerity to te... http://t.co/oKtZQ8GpXZ,1,0,0,1,0,0,0,0
+RightSideNews: Right Side News: New Articles for 03/11/2013 - http://t.co/djoZlPztWj,1,0,0,1,0,0,0,0
+RightSideNews: Right Side News Winning the Culture War and the Next Generation: A transcript of the "Assault on... http://t.co/2W2fuR09Gu breaking news,1,0,0,1,0,0,0,0
+RightSideNews: Right Side News Hey GOP: More Capone, Less Fredo: “I can handle things! I’m smart! Not like everybody... http://t.co/cUKFB008vO breaking,1,0,0,1,0,0,0,0
+RightSideNews: Right Side News Winning the Culture War and the Next Generation: A transcript of the "Assault on the Culture" ... http://t.co/2W2fuR09Gu,1,0,0,1,0,0,0,0
+RightSideNews: Right Side News Barack Obama is no Abraham Lincoln: Righteousness exalts a nation, but sin condemns any people... http://t.co/fZkRq2Oh0T,1,0,0,1,0,0,0,0
+RightSideNews: Right Side News: New Articles for 03/10/2013 - http://t.co/lJFcBjcMNm,1,0,0,1,0,0,0,0
+RightSideNews: http://t.co/9EK4f365PK http://t.co/eTXMaEghHh,1,0,0,2,0,0,0,0
+RightSideNews: Right Side News The Senator from Al-Qaeda: RAND PAUL/VAN JONES 2016
+Here's an easy way to tell when your posit... http://t.co/Mojg4xUdUw,1,0,0,1,0,0,0,0
+RightSideNews: Right Side News The Senator from Al-Qaeda: RAND PAUL/VAN JONES 2016
+Here's an easy way to tell w... http://t.co/Mojg4xUdUw breaking news,1,0,0,1,0,0,0,0
+RightSideNews: Right Side News: New Articles for 03/09/2013 - http://t.co/hg29ajqSar,1,0,0,1,0,0,0,0
+The__Chauvinist: RT @InternetHinduz: @The__Chauvinist *URGENT* Dada check this &gt;&gt; https://t.co/TptfqmsYS2 &amp; my replies https://t.co/kcusRGSOwY  ...,1,0,1,2,1,0,0,0
+The__Chauvinist: RT @MissNobody72: @The__Chauvinist
+@ThyUrbanMonk
+@twitbandana
+@ursvish17
+@vaibk
+@VJaddicted
+@Vishwa930
+Pranaams, AVGD  On ManShaant Mangal!,0,0,1,2,1,0,0,0
+The__Chauvinist: RT @B_W70: @sudhakar2277
+@SunnyParampil
+@tan776
+@TarakRindani
+@The__Chauvinist
+All Passions Lead 2 Exaggeration;That's Y They R Passions ...,0,0,1,1,1,0,0,0
+The__Chauvinist: @Sharaf7777 LOL, nobody alive, be a suicide bomber &amp; go to Allah's whore house to find your Mom &amp; sister giving BJ to jihadi's,0,0,1,1,0,1,0,0
+The__Chauvinist: RT @TarekFatah: For citation &amp; reference you'll have to buy the book , 'Chasing a Mirage' @The__Chauvinist. Not everything in life i ...,0,0,1,0,1,0,0,0
+The__Chauvinist: LOL RT @TarekFatah For citation &amp; reference you'll have to buy the book , 'Chasing a Mirage' Not everything in life is free. @hurtlockerbeee,0,0,1,1,0,0,0,0
+The__Chauvinist: RT @catstrangler101: #MyJihad - Here is a MUST-READ article from Citizen Warrior - Why the peace-loving majority of Muslims is irrelevan ...,0,0,1,1,1,0,0,0
+The__Chauvinist: RT @truevirathindu: So if a hindu gets frustrated and uses harsh words he is not a Hindu. Jai Shree Krishna. Trust Sonia, She will save  ...,0,0,1,1,1,0,0,0
+The__Chauvinist: RT @Bharat_ki_awaaz: @The__Chauvinist @janfaisal They are just grunting by habit nothing else..,0,0,1,0,1,0,0,0
+The__Chauvinist: Islam – The No-exit Open Tribe Theory http://t.co/HeojBMP14f  #Koranimals #MyJihad,1,0,0,1,0,0,0,0
+The__Chauvinist: RT @_NewseXtra: #Islam owes its success to its own intolerance and the tolerance of others http://t.co/wrTOIoii0F #myjihad,1,0,1,1,1,0,0,0
+The__Chauvinist: RT @_NewseXtra: Every death relating to Israel is scoured with a fine-toothed comb while Sunnis and Shia in Syria are allowed wholesale  ...,0,0,1,0,1,0,0,0
+The__Chauvinist: RT @_NewseXtra: Did you know that in Feb 2013 alone, the peace loving, tolerant soldiers of #allah slaughtered 1059 people? #myjihad,0,0,1,0,1,0,0,0
+The__Chauvinist: RT @_NewseXtra: And did you know that in the first week week of March alone, our peace loving, brave soldiers of #allah slaughtered 232? ...,0,0,1,0,1,0,0,0
+The__Chauvinist: RT @OccupyBawlStree: Jihad in America: The Grand Deception (DVD review) http://t.co/1n6fV3erzP #MyJihad #AJEUS #jihad #tcot #TGDN #SOT,1,0,1,1,1,0,0,0
+The__Chauvinist: @janfaisal Read my 86000+ tweets before arguing with me @Bharat_ki_awaaz,0,0,1,1,0,0,0,0
+The__Chauvinist: @janfaisal What is grown up style? To believe in your bullshit taqiya? Thats for illiterates.I'm far nore literate than you @bharat_ki_awaaz,0,0,1,1,0,0,1,0
+The__Chauvinist: RT @IranAware: Everybody must get stoned.. #myjihad http://t.co/3MFwqybz2L,0,0,1,1,1,0,0,0
+The__Chauvinist: ROFLMAO&gt; Defending the pedophile prophet Mohd&gt; Why Did Prophet Have So Many Wives? http://t.co/2jzfTdCkth #Koranimals #MyJihad @janfaisal,1,0,1,1,0,0,0,0
+The__Chauvinist: RT @rraj068: @the__chauvinist kashmir valley is evident hindus gave them refuge now there is no hindu,u can believe on a devil bt nt on them,0,0,1,0,1,0,0,0
+HottestFap: #porn Hot Porn Photo - gorgeous http://t.co/o6Ua1Yw6h5,0,0,0,1,0,0,1,0
+HottestFap: #sexy Hot Porn Photo - so hot! http://t.co/ZZdsdWIemp,0,0,0,1,0,0,0,0
+HottestFap: #porn Sexy Hot Porn Pic RT if you think she is gorgeous http://t.co/Am2kgPbbD8,0,0,0,1,0,0,1,0
+HottestFap: #porn Sexy Hot Porn Pic RT if you think she is hot http://t.co/nvSZGN4cpM,0,0,0,1,0,0,1,0
+HottestFap: #nsfw Hot Porn Photo RT if you think she is hot http://t.co/xxYYoWyAx7,0,0,0,1,0,0,0,0
+HottestFap: #naked Hot Porn Photo - so hot! http://t.co/U2Uxglx0eF,0,0,0,1,0,0,0,0
+HottestFap: #sexy Sexy Hot Porn Pic - so hot! http://t.co/nYVIseISK8,0,0,0,1,0,0,0,0
+HottestFap: #nude Sexy Hot Porn Pic RT if you think she is hot http://t.co/tnm79d7d8Y,0,0,0,1,0,0,0,0
+HottestFap: #naked Sexy Hot Porn Pic RT if you think she is hot http://t.co/es3h5OzvWF,0,0,0,1,0,0,0,0
+HottestFap: #sexy Hot Porn Photo - so hot! http://t.co/Ui2kV5wdiB,0,0,0,1,0,0,0,0
+HottestFap: #nude Sexy Hot Porn Pic RT if you think she is gorgeous http://t.co/PCMopp9ppb,0,0,0,1,0,0,0,0
+HottestFap: #nude Hot Porn Photo RT if she is worth it ;) http://t.co/1vHQi6eSjE,0,0,0,1,0,0,0,0
+HottestFap: #nsfw Hot Porn Photo RT if she is worth it ;) http://t.co/HQYXBG4tJG,0,0,0,1,0,0,0,0
+HottestFap: #nsfw Sexy Hot Porn Pic RT if she is worth it ;) http://t.co/sbWkgchHCX,0,0,0,1,0,0,0,0
+HottestFap: #nsfw Hot Porn Photo - gorgeous http://t.co/uPFJPNm2la,0,0,0,1,0,0,0,0
+HottestFap: #sexy Sexy Hot Porn Pic RT if you think she is gorgeous http://t.co/TILL4eUvsJ,0,0,0,1,0,0,0,0
+HottestFap: #porn Sexy Hot Porn Pic RT if she is worth it ;) http://t.co/torBzLcloA,0,0,0,1,0,0,1,0
+HottestFap: #naked Sexy Hot Porn Pic RT if you think she is hot http://t.co/l0dvPKkrJc,0,0,0,1,0,0,0,0
+HottestFap: #sexy Hot Porn Photo RT if you think she is hot http://t.co/BIDxvdKTCo,0,0,0,1,0,0,0,0
+HottestFap: #porn Hot Porn Photo RT if you think she is hot http://t.co/BDUiDuWJNw,0,0,0,1,0,0,1,0
+: RT @Whoozley: This about sums it up for me: http://t.co/2eRBM0DL9N,0,0,1,1,1,0,0,0
+: @icpcamritapuri Team SIGSEGV unable to login! Error message: http://t.co/5PUvGv16 (not even our id),1,0,1,2,0,0,0,0
+: RT @bomanirani: Watching yuvi's mom smiling is a moment to cherish. Cricket is like the theatre of life!!,0,0,1,0,1,0,0,0
+: @bedazzledknight :D Satyam... but overall, standard kuranju...,0,0,1,1,0,0,0,0
+: @bedazzledknight You watch it :P I can give the links :D,0,0,1,0,0,0,0,0
+: @bedazzledknight I watched too. Saw 2 episodes of #HIMYM. Its starting to get boring :-/ Nice twist at the end of 2nd episode though,0,0,1,1,0,0,0,0
+: @bedazzledknight Castle? :P,0,0,1,0,0,0,0,0
+: @bedazzledknight Ha! Im pretty sure of what's real and what's not. The voice in my head says its real :P,0,0,1,0,0,0,0,0
+: @bedazzledknight I have to confess. They are real. I just told u to make u feel better.
+Poor u sitting there n creating imaginary people :P,0,0,1,2,0,0,0,0
+: @bedazzledknight :D Sometimes keeping a low profile helps,0,0,1,0,0,0,0,0
+: @bedazzledknight Yea! Like I said, nobody really noticed :P,0,0,1,0,0,0,0,0
+: @shamilcm nice :),0,0,1,0,0,0,0,0
+: RT @funnyoneliners: When choosing a path in life, try to avoid the psychopaths.
+RT @avi1111,0,0,1,0,1,0,0,0
+: @pranavashok totally awesome!! :D,0,0,1,0,0,0,0,0
+: RT @pranavashok: Have 2 see 2 believe YouTube #epicness. Jack Black gets his Kung Fu Panda 2 on! http://t.co/HmCAFS8,1,0,1,1,1,0,0,0
+: RT @Disney: Integrity can be found in the smallest of gestures. http://di.sn/4j #Aladdin,0,0,1,1,1,0,0,0
+: RT @priyankachopra: Oh my god! What a show of class Team India! The world cup awaits you in Mumbai! Can you hear the unified sound of pu ...,0,0,1,0,1,0,0,0
+: Join me at the Firefox 4 Twitter Party and celebrate the newest version #fx4 #teamfirefox http://t.co/qvUB9lG via @firefox,1,0,1,1,0,0,0,0
+: RT @ShashiTharoor: At gym today,watched a bit of doughty Somdev holding his own vs Nadal. Defeat 7-5 6-4 no disgrace. He's a battler all ...,0,0,1,0,1,0,0,0
+: http://www.google.com/crisisresponse/japanquake2011.html Japan quake,0,0,0,1,0,0,0,0
