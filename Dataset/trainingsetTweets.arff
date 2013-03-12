@@ -1,6 +1,6 @@
 @RELATION safe-tweets
 
-%@ATTRIBUTE Tweet 	STRING
+@ATTRIBUTE Tweet 	STRING
 @ATTRIBUTE hasUrl 	 NUMERIC 
 @ATTRIBUTE verifiedUser 	 NUMERIC 
 @ATTRIBUTE Mentions 	 NUMERIC 
@@ -12,12 +12,12 @@
 @ATTRIBUTE class 	{Safe, Unsafe}
 
 @DATA
-0,0,1,2,1,0,0,0,Safe
-0,0,1,1,1,0,0,0,Safe
-0,0,1,2,1,0,0,0,Safe
-0,0,1,2,1,0,0,0,Unsafe
-0,0,0,0,0,0,0,0,Safe
-0,0,1,1,1,0,0,0,Safe
+SirVince_: RT @FiftyFiftyOdds: Goat surfing / Result of a 100mph fastball to face http://t.co/Sw81xizqFa,0,0,1,2,1,0,0,0,Safe
+SirVince_: RT @FiftyFiftyOdds: Flesh eating disease / Adorable sloth taking a bath http://t.co/AAWQ51FtpF,0,0,1,1,1,0,0,0,Safe
+SirVince_: RT @FiftyFiftyOdds: Baby elephant playing on the beach / Extremely hairy man in a speedo http://t.co/QBupMzKIMx,0,0,1,2,1,0,0,0,Safe
+SirVince_: RT @FiftyFiftyOdds: Katy Perry's cleavage / Sliced open hand http://t.co/7tcG9NkB77,0,0,1,2,1,0,0,0,Unsafe
+SirVince_: As long as I got my suit and tie,0,0,0,0,0,0,0,0,Safe
+SirVince_: RT @WannaBeKumar: 😂😂 http://t.co/xd3dNpU2HZ,0,0,1,1,1,0,0,0,Safe
 SirVince_: By anyone, I mean people smaller than he is.,0,0,0,0,0,0,0,0,Safe
 SirVince_: But a fuckboy is willing to fight "anyone" to not lose his girl.,0,0,0,0,0,1,0,0,Unsafe
 SirVince_: #DolphinsNation lololololol,0,0,0,0,0,0,0,0,Safe
@@ -233,3 +233,46 @@ RT @avi1111,0,0,1,0,1,0,0,0,Safe
 : Join me at the Firefox 4 Twitter Party and celebrate the newest version #fx4 #teamfirefox http://t.co/qvUB9lG via @firefox,1,0,1,1,0,0,0,0,Safe
 : RT @ShashiTharoor: At gym today,watched a bit of doughty Somdev holding his own vs Nadal. Defeat 7-5 6-4 no disgrace. He's a battler all ...,0,0,1,0,1,0,0,0,Safe
 : http://www.google.com/crisisresponse/japanquake2011.html Japan quake,0,0,0,1,0,0,0,0,Safe
+
+UnfuckableFuck: I can commit. Louis and I have been hanging and banging for almost 4 years #truelove #LouisVuitton #bitcheslovepurses,0,0,0,1,0,0,0,0,Safe
+UnfuckableFuck: Retail therapy always cures the Monday  blues #SSP,0,0,0,0,0,0,0,0,Safe
+UnfuckableFuck: I have longer relationships with clothes than I do with people #undateable,0,0,0,0,0,0,0,0,Safe
+UnfuckableFuck: I wish every guy I slept with would develop amnesia so they stop stalking me,0,0,0,0,0,0,0,0,Safe
+UnfuckableFuck: Give my fucking hour back, whore,0,0,0,0,0,1,1,0,Unsafe
+UnfuckableFuck: RT @TruthByME: @UnfuckableFuck I feel like this would be a good response. http://t.co/spKkXviuHX,0,0,1,1,1,0,0,0,Safe
+UnfuckableFuck: #OMGAH http://t.co/uyTglTp0IX,0,0,0,1,0,0,0,0,Safe
+UnfuckableFuck: I haven't practiced any kind of religion except for eating,0,0,0,0,0,0,0,0,Safe
+UnfuckableFuck: Threesome with Justin Timberlake and Adam Levine &gt;&gt;&gt;,0,0,0,0,0,0,0,0
+UnfuckableFuck: Unfortunately you still exist and fortunately we're still not compatible,0,0,0,0,0,0,0,0,Safe
+UnfuckableFuck: I'm the best thing you'll never have,0,0,0,0,0,0,0,0,Safe
+UnfuckableFuck: Your bitch, she so thirsty,0,0,0,0,0,2,0,1,Unsafe
+UnfuckableFuck: Let me tell you about a recent place I visited #rockbottom #unfuckable,0,0,0,0,0,0,0,0,Safe
+UnfuckableFuck: Nice Christian Audigier hoodie, douchebagel #unfuckable,0,0,0,1,0,0,0,0,Unsafe
+The__Chauvinist: @Sharaf7777 LOL, nobody alive, be a suicide bomber &amp; go to Allah's whore house to find your Mom &amp; sister giving BJ to jihadi's,0,0,1,1,0,1,0,0,Unsafe
+The__Chauvinist: RT @catstrangler101: #MyJihad - Here is a MUST-READ article from Citizen Warrior - Why the peace-loving majority of Muslims is irrelevant,0,0,1,1,1,0,0,0,Unsafe
+The__Chauvinist: RT @_NewseXtra: #Islam owes its success to its own intolerance and the tolerance of others http://t.co/wrTOIoii0F #myjihad,1,0,1,1,1,0,0,0,Unsafe
+The__Chauvinist: RT @_NewseXtra: And did you know that in the first week week of March alone, our peace loving, brave soldiers of #allah slaughtered 232? ...,0,0,1,0,1,0,0,0,Unsafe
+The__Chauvinist: @janfaisal What is grown up style? To believe in your bullshit taqiya? Thats for illiterates.I'm far nore literate than you @bharat_ki_awaaz,0,0,1,1,0,0,1,0,Unsafe
+The__Chauvinist: RT @IranAware: Everybody must get stoned.. #myjihad http://t.co/3MFwqybz2L,0,0,1,1,1,0,0,0,Unsafe
+The__Chauvinist: ROFLMAO&gt; Defending the pedophile prophet Mohd&gt; Why Did Prophet Have So Many Wives? http://t.co/2jzfTdCkth #Koranimals #MyJihad @janfaisal,1,0,1,1,0,0,0,0,Unsafe
+The__Chauvinist: RT @rraj068: @the__chauvinist kashmir valley is evident hindus gave them refuge now there is no hindu,u can believe on a devil bt nt on them,0,0,1,0,1,0,0,0,Unsafe
+HottestFap: #porn Hot Porn Photo - gorgeous http://t.co/o6Ua1Yw6h5,0,0,0,1,0,0,1,0,Unsafe
+HottestFap: #sexy Hot Porn Photo - so hot! http://t.co/ZZdsdWIemp,0,0,0,1,0,0,0,0,Unsafe
+HottestFap: #porn Sexy Hot Porn Pic RT if you think she is gorgeous http://t.co/Am2kgPbbD8,0,0,0,1,0,0,1,0,Unsafe
+HottestFap: #porn Sexy Hot Porn Pic RT if you think she is hot http://t.co/nvSZGN4cpM,0,0,0,1,0,0,1,0,Unsafe
+HottestFap: #nsfw Hot Porn Photo RT if you think she is hot http://t.co/xxYYoWyAx7,0,0,0,1,0,0,0,0,Unsafe
+HottestFap: #naked Hot Porn Photo - so hot! http://t.co/U2Uxglx0eF,0,0,0,1,0,0,0,0,Unsafe
+HottestFap: #sexy Sexy Hot Porn Pic - so hot! http://t.co/nYVIseISK8,0,0,0,1,0,0,0,0,Unsafe
+HottestFap: #nude Sexy Hot Porn Pic RT if you think she is hot http://t.co/tnm79d7d8Y,0,0,0,1,0,0,0,0,Unsafe
+HottestFap: #naked Sexy Hot Porn Pic RT if you think she is hot http://t.co/es3h5OzvWF,0,0,0,1,0,0,0,0,Unsafe
+HottestFap: #sexy Hot Porn Photo - so hot! http://t.co/Ui2kV5wdiB,0,0,0,1,0,0,0,0,Unsafe
+HottestFap: #nude Sexy Hot Porn Pic RT if you think she is gorgeous http://t.co/PCMopp9ppb,0,0,0,1,0,0,0,0,Unsafe
+HottestFap: #nude Hot Porn Photo RT if she is worth it ;) http://t.co/1vHQi6eSjE,0,0,0,1,0,0,0,0,Unsafe
+HottestFap: #nsfw Hot Porn Photo RT if she is worth it ;) http://t.co/HQYXBG4tJG,0,0,0,1,0,0,0,0,Unsafe
+HottestFap: #nsfw Sexy Hot Porn Pic RT if she is worth it ;) http://t.co/sbWkgchHCX,0,0,0,1,0,0,0,0,Unsafe
+HottestFap: #nsfw Hot Porn Photo - gorgeous http://t.co/uPFJPNm2la,0,0,0,1,0,0,0,0,Unsafe
+HottestFap: #sexy Sexy Hot Porn Pic RT if you think she is gorgeous http://t.co/TILL4eUvsJ,0,0,0,1,0,0,0,0,Unsafe
+HottestFap: #porn Sexy Hot Porn Pic RT if she is worth it ;) http://t.co/torBzLcloA,0,0,0,1,0,0,1,0,Unsafe
+HottestFap: #naked Sexy Hot Porn Pic RT if you think she is hot http://t.co/l0dvPKkrJc,0,0,0,1,0,0,0,0,Unsafe
+HottestFap: #sexy Hot Porn Photo RT if you think she is hot http://t.co/BIDxvdKTCo,0,0,0,1,0,0,0,0,Unsafe
+HottestFap: #porn Hot Porn Photo RT if you think she is hot http://t.co/BDUiDuWJNw,0,0,0,1,0,0,1,0,Unsafe
