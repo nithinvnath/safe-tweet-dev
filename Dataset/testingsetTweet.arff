@@ -1,0 +1,54 @@
+@RELATION safe-tweets
+
+@ATTRIBUTE hasUrl 	 NUMERIC 
+@ATTRIBUTE verifiedUser 	 NUMERIC 
+@ATTRIBUTE Mentions 	 NUMERIC 
+@ATTRIBUTE Emphasis 	 NUMERIC 
+@ATTRIBUTE Retweet 	 NUMERIC 
+@ATTRIBUTE Profanity 	 NUMERIC 
+@ATTRIBUTE Explicit 	 NUMERIC 
+@ATTRIBUTE HateSpeech 	 NUMERIC 
+@ATTRIBUTE class 	{Safe, Unsafe}
+
+@DATA
+
+HottestFap: #sexy Sexy Hot Porn Pic RT if you think she is gorgeous http://t.co/TILL4eUvsJ,0,0,0,1,0,0,0,0,Unsafe
+HottestFap: #porn Sexy Hot Porn Pic RT if she is worth it ;) http://t.co/torBzLcloA,0,0,0,1,0,0,1,0,Unsafe
+HottestFap: #naked Sexy Hot Porn Pic RT if you think she is hot http://t.co/l0dvPKkrJc,0,0,0,1,0,0,0,0,Unsafe
+HottestFap: #sexy Hot Porn Photo RT if you think she is hot http://t.co/BIDxvdKTCo,0,0,0,1,0,0,0,0,Unsafe
+HottestFap: #porn Hot Porn Photo RT if you think she is hot http://t.co/BDUiDuWJNw,0,0,0,1,0,0,1,0,Unsafe
+SlightlyTempt: @stellar12345 @TiaLayneXXX but would you strapon fuck one? and by one i mean me?,0,0,1,0,0,1,1,0,Unsafe
+SlightlyTempt: @OBrookeBlue would you massage my prostate with your fist?,0,0,1,0,0,0,0,0,Unsafe
+SlightlyTempt: @MistressSaphire do u strapon fuck?,0,0,1,0,0,1,1,0,Unsafe
+SlightlyTempt: @Cuckformywife would love to see some pics,0,0,1,0,0,0,0,0,Unsafe
+SlightlyTempt: simply beautiful #tranny #tgirl http://t.co/6fMH1fA3XT,0,0,0,1,0,0,0,0,Unsafe
+Phurley49: Not an asshole just don't give a fuck a lot,0,0,0,0,0,2,1,0,Unsafe
+jpereznugga: @EllaShaye97 no i was just saying tumblr is gay as fuck if i had one tho it would just be all naked people and shit,0,0,1,0,0,2,2,0,Unsafe
+tylerfitzpatrik: Fuck ya. Quinlin doing work #barn,0,0,0,0,0,0,0,0,Unsafe
+SlightlyTempt: @Foxxy702 cheeky smile there sexy, ud have the same smile on your face if i was eimming you and massaging your cock with my saliva!,0,0,1,1,0,0,1,0,Unsafe
+SlightlyTempt: @maxandmeganxxx hot pic, id like to taste u both as u cum,0,0,1,0,0,0,2,0,Unsafe
+tylerfitzpatrik: @zackkliska &gt;,0,0,1,0,0,0,0,0,Safe
+tylerfitzpatrik: @jessewebb285 mmmhhhmmm,0,0,1,1,0,0,0,0,Safe
+tylerfitzpatrik: @jessewebb285 both ;),0,0,1,0,0,0,0,0,Safe
+Mobzzzx_: Does anyone else ever wake up in the middle of the night extremely thirsty and water tastes like it came from heaven?,0,0,0,0,0,0,0,0,Safe
+Mobzzzx_: Charging your phone in the car is the best.,0,0,0,0,0,0,0,0,Safe
+Mobzzzx_: Why is it snowing omg,0,0,0,0,0,0,0,0,Safe
+Mobzzzx_: Busy dayyyy today,0,0,0,1,0,0,0,0,Safe
+Mobzzzx_: Next 10 people follow @D3annaOmg will get a shoutout from me!!,0,0,1,0,0,0,0,0,Safe
+Mobzzzx_: 10 more people follow @D3annaOmg for me she's nearly on 1K!!,0,0,1,0,0,0,0,0,Safe
+Mobzzzx_: RT @D3annaOmg: Of course your 'just friends',0,0,1,0,1,0,0,0,Safe
+jpereznugga: @Lil_BooBoo98 alright hmu sometime :),0,0,1,0,0,0,0,0,Safe
+jpereznugga: @Lil_BooBoo98 ... i wouldnt have told you to talk to me if i didnt want you too,0,0,1,0,0,0,0,0,Safe
+jpereznugga: @Lil_BooBoo98 i never said that?!,0,0,1,0,0,0,0,0,Safe
+CNN: U.S. expels 2 Venezuelan diplomats - two U.S. officials were expelled from Venezuela last week: http://t.co/aLY3pPUDXq,1,1,0,2,0,0,0,0,Safe
+CNN: Ex-Detroit Mayor Kwame Kilpatrick convicted in corruption case - faces up to 20 years in prison: http://t.co/ZbCHGlAsp9,1,1,0,1,0,0,0,0,Safe
+CNN: India gang rape suspect found dead in jail cell - police say suicide; parents allege murder: http://t.co/vhI8oNjZps,1,1,0,1,0,0,0,0,Safe
+CNN: RT @CNNPR: CNN's @chriscuomo &amp; @andersoncooper lead the network's complete coverage of the Papal #Conclave. Full details here: http: ...,0,1,1,2,1,0,0,0,Safe
+CNN: Six teens killed, two injured when overcrowded SUV flips into pond: http://t.co/J0UEFMj8ai,1,1,0,2,0,0,0,0,Safe
+CNN: RT @cnnbrk: Several #NATO and Afghan troops killed in latest insider attack, NATO says. http://t.co/fdjRzxzeez,1,1,1,2,1,0,0,0,Safe
+CNN: What are solutions for healthcare consumers? @DrSanjayGupta explains how you can save money by negotiating medical bills down - now on @CNN.,0,1,1,0,0,0,0,0,Safe
+CNN: Why don't insurance companies pay primary care doctors more? @DrSanjayGupta asks the head of United Healthcare. 10 p.m. ET #RescueHealthcare,0,1,1,0,0,0,0,0,Safe
+CNN: RT @susancandiotti: Tune in now: ESCAPE FIRE Debut of CNN Films  Examining healthcare like you haven't seen b4 http://t.co/CpXsA2YzX6 8p ...,1,1,1,2,1,0,0,0,Safe
+CNN: RT @OutFrontCNN: Exposing the problems with the U.S. health care system - @EscapeFire tonight at 8 p.m. and Sanjay Gupta: MD at 10 p.m.  ...,0,1,1,0,1,0,0,0,Safe
+SlightlyTempt: @24_7_Juan_Kerr @toniglam she looks like shes having fun,0,0,1,0,0,0,0,0,Safe
+SlightlyTempt: @24_7_Juan_Kerr its exactly what i want,0,0,1,0,0,0,0,0,Safe
