@@ -4,7 +4,7 @@
 Assumes the tweets are of the form <username>: <tweet>"""
 
 import tweepy
-from webbrowser import open as webopen
+import cPickle as pickle
 
 import re
 from nltk.corpus import stopwords, wordnet
@@ -133,8 +133,8 @@ def hasHateSpeech(words):
 	return count
 
 
-frawtweets = open('raw-tweets.dat','r')
-foutput = open('testdata1.arff','a')
+frawtweets = open('raw-tweets2.dat','r')
+foutput = open('trainingdata1.arff','a')
 
 if foutput.tell()==0:
 	foutput.write("@RELATION safe-tweets\n\n")
@@ -146,21 +146,27 @@ if foutput.tell()==0:
 	foutput.write("@ATTRIBUTE Profanity \t NUMERIC \n")
 	foutput.write("@ATTRIBUTE Explicit \t NUMERIC \n")
 	foutput.write("@ATTRIBUTE HateSpeech \t NUMERIC \n")
-	foutput.write("@ATTRIBUTE class \t{Positive, Negative}\n\n")
+	foutput.write("@ATTRIBUTE class \t{Safe, Unsafe}\n\n")
 	foutput.write("@DATA\n\n")
 
-for user_name in fusersfile:
-	status_list =api.user_timeline(user_name.strip())
-	for tweet in status_list:
-		string = user_name.strip() +": "+ tweet.text+","
-		string = string + str(hasUrl(tweet)) + "," + str(verifiedUser(tweet.user)) +"," +str(hasUsernames(tweet))
+print("Safe or Unsafe (S/U)?")
+statuses = pickle.load(frawtweets)
+while statuses is not None:
+	for tweet in statuses:
+		tweet_text = tweet.user.name+": "+tweet.text+" (S/U)?"
+		s = raw_input(tweet_text.encode("UTF-8"))
+		if s == "S":
+			isSafe="Safe"
+		else:
+			isSafe="Unsafe"
+		tweet_vector = str(hasUrl(tweet)) + "," + str(verifiedUser(tweet.user)) +"," +str(hasUsernames(tweet))
 		tweet_text = tweet.text
-		string = string +","+ str(emphExist(tweet_text)) + "," +str(isRetweet(tweet))
+		tweet_vector = tweet_vector +","+ str(emphExist(tweet_text)) + "," +str(isRetweet(tweet))
 		tweet_words = removeStopwords(tweet_text)
-		string = string + ","+ str(hasProfanity(tweet_words))+ ","+ str(hasExplicit(tweet_words))+ ","+ str(hasHateSpeech(tweet_words))
-		string = string + "\n"
-		print string
-		foutput.write(string.encode("UTF-8"))
-
+		tweet_vector = tweet_vector + ","+ str(hasProfanity(tweet_words))+ ","+ str(hasExplicit(tweet_words))+ ","+ str(hasHateSpeech(tweet_words))
+		tweet_vector = tweet_vector + ","+isSafe+"\n"
+		print tweet_vector
+		foutput.write(tweet_vector.encode("UTF-8"))
+	statuses = pickle.load(frawtweets)
 foutput.close()
-fusersfile.close()
+frawtweets.close()
