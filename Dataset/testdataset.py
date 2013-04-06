@@ -11,55 +11,11 @@ from nltk.corpus import stopwords, wordnet
 from nltk.stem import WordNetLemmatizer
 from nltk.stem import PorterStemmer
 
-#---------------------------------------------------------------------#
-#							TWITTER API								  #
-#---------------------------------------------------------------------#
-
-# #Consumer token and secret are specific to the application
-# #Can  be found in dev.twitter.com/apps
-# consumer_token = "pDeVZbNzK6HXocUuhwLqBg"
-# consumer_secret = "Itj45FWSmMr0VmrNPJuO2KIaIt3hzayY2ywVteh2M"
-
-# #To get authorization from user using OAuth
-# auth = tweepy.OAuthHandler(consumer_token,consumer_secret)
-# auth_url = auth.get_authorization_url(signin_with_twitter=True)
-
-# # print "Authorize: " + auth_url
-# webopen(auth_url)
-# verifier = raw_input('PIN: ').strip()
-# auth.get_access_token(verifier)
-
-# access_token = auth.access_token.key
-# access_secret = auth.access_token.secret
-# # access_token = "45142783-KrrjDjWf0M3OKuq1Ckb9Bi6WpNX9ZQnhurPM1wxDA"
-# # access_secret = "b6a6OHD39u1GNJMfkTp5LGRWCk7WWgTZgPkE6sgp8wo"
-
-# #Access the user's account using the OAuth credentials
-# auth.set_access_token(access_token,access_secret)
-
-# api = tweepy.API(auth)	#authenticated api module
-
-# if api.me().name is not None:
-# 	print "Successfully authenticated"
-# else:
-# 	print "Authentication failed!"
-
-# pub = api.home_timeline()
-
-#--------------------------------------
-
 consumer_token = "pDeVZbNzK6HXocUuhwLqBg"
 consumer_secret = "Itj45FWSmMr0VmrNPJuO2KIaIt3hzayY2ywVteh2M"
 auth = tweepy.OAuthHandler(consumer_token,consumer_secret)
 auth_url = auth.get_authorization_url(signin_with_twitter=True)
-access_token = "45142783-KrrjDjWf0M3OKuq1Ckb9Bi6WpNX9ZQnhurPM1wxDA"
-access_secret = "b6a6OHD39u1GNJMfkTp5LGRWCk7WWgTZgPkE6sgp8wo"
-auth.set_access_token(access_token,access_secret)
-api = tweepy.API(auth)
 
-#---------------------------------------------------------------------#
-#							PREPROCESSING							  #
-#---------------------------------------------------------------------#
 
 
 wnl = WordNetLemmatizer()
@@ -84,15 +40,6 @@ def stemming(line):
 	return line
 
 
-#---------------------------------------------------------------------#
-#							INDEXING								  #
-#---------------------------------------------------------------------#
-
-#---------------------------------------------------------------------#
-#Twitter converts all urls to http://t.co/<something>
-#Checks for presence of URL using API. Takes as input a tweet object
-
-
 def hasUrl (tweet):
 	#u=re.compile('http\:\/\/t\.co\/[a-zA-Z0-9]+')
 	#return u.findall(line)
@@ -102,11 +49,6 @@ def hasUrl (tweet):
 		return 1
 
 
-#---------------------------------------------------------------------#
-#function to check the presence of a username in the 
-#tweet
-
-
 def hasUsernames(tweet):
 	#u=re.compile('\@[a-zA-Z0-9\_]+')
 	#return u.findall(line)
@@ -114,20 +56,11 @@ def hasUsernames(tweet):
 		return 0
 	else:
 		return 1
-
-#---------------------------------------------------------------------#
-#Function to check if the author of tweet is verified user or not
-
 def verifiedUser(user):
 	if user.verified is True:
 		return 1
 	else:
 		return 0
-
-
-#---------------------------------------------------------------------#
-#function to find emphasis on words by repetition of
-#letters
 
 def emphExist(line):
 	presence = 0
@@ -142,8 +75,6 @@ def emphExist(line):
 	return presence
 
 
-
-#replaces the word after removing repeated letters
 def emphReplace(word):
 	emp_regexp = re.compile(r'(\w*)(\w)\2(\w*)')
 	if wordnet.synsets(word):
@@ -154,9 +85,7 @@ def emphReplace(word):
 	word = matched.group(1)+matched.group(2)+matched.group(3)
 	return emphReplace(word)
 
-#---------------------------------------------------------------------#
-#checks if the tweet is a retweet
-#takes as input tweet object
+
 def isRetweet(tweet):
 	# p = re.compile('([A-Za-z\ ]+\:)(\\t)(.*)')
 	# m = p.match(tweet)
@@ -170,10 +99,6 @@ def isRetweet(tweet):
 	else:
 		return 0
 
-
-#---------------------------------------------------------------------#
-#checks for presence of profanity. Compares each word from file 'bad-words.txt'
-#expects a list of words
 def hasProfanity(words):
 	count = 0
 	f = open('../Corpus/profanity.txt','r')
@@ -208,22 +133,22 @@ def hasHateSpeech(words):
 	return count
 
 
-fusersfile = open('testusers','r')
+frawtweets = open('raw-tweets.dat','r')
+foutput = open('testdata1.arff','a')
 
-foutput = open('testdata1.arff','w')
+if foutput.tell()==0:
+	foutput.write("@RELATION safe-tweets\n\n")
+	foutput.write("@ATTRIBUTE hasUrl \t NUMERIC \n")
+	foutput.write("@ATTRIBUTE verifiedUser \t NUMERIC \n")
+	foutput.write("@ATTRIBUTE Mentions \t NUMERIC \n")
+	foutput.write("@ATTRIBUTE Emphasis \t NUMERIC \n")
+	foutput.write("@ATTRIBUTE Retweet \t NUMERIC \n")
+	foutput.write("@ATTRIBUTE Profanity \t NUMERIC \n")
+	foutput.write("@ATTRIBUTE Explicit \t NUMERIC \n")
+	foutput.write("@ATTRIBUTE HateSpeech \t NUMERIC \n")
+	foutput.write("@ATTRIBUTE class \t{Positive, Negative}\n\n")
+	foutput.write("@DATA\n\n")
 
-foutput.write("@RELATION safe-tweets\n\n")
-foutput.write("@ATTRIBUTE hasUrl \t NUMERIC \n")
-foutput.write("@ATTRIBUTE verifiedUser \t NUMERIC \n")
-foutput.write("@ATTRIBUTE Mentions \t NUMERIC \n")
-foutput.write("@ATTRIBUTE Emphasis \t NUMERIC \n")
-foutput.write("@ATTRIBUTE Retweet \t NUMERIC \n")
-foutput.write("@ATTRIBUTE Profanity \t NUMERIC \n")
-foutput.write("@ATTRIBUTE Explicit \t NUMERIC \n")
-foutput.write("@ATTRIBUTE HateSpeech \t NUMERIC \n")
-foutput.write("@ATTRIBUTE class \t{Positive, Negative}\n\n")
-
-foutput.write("@DATA\n\n")
 for user_name in fusersfile:
 	status_list =api.user_timeline(user_name.strip())
 	for tweet in status_list:
