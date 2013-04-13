@@ -242,8 +242,7 @@ print tweet.text
 print "URL: ", hasUrl(tweet)
 print "User: ", verifiedUser(tweet.user)
 print "Mentions: ", hasUsernames(tweet)
-tweet_text = tweet.text.lower
-tweet_text = tweet_text.lower()
+tweet_text = tweet.text.lower()
 print "Emphasis: ", emphExist(tweet_text)
 print "Retweet: ", isRetweet(tweet)
 tweet_words = removeStopwords(tweet_text)

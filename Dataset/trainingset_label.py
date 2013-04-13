@@ -149,11 +149,11 @@ if foutput.tell()==0:
 	foutput.write("@ATTRIBUTE class \t{Safe, Unsafe}\n\n")
 	foutput.write("@DATA\n\n")
 
-print("Safe or Unsafe (S/U)?")
+print("Safe or Unsafe or Ignore (S/U/Ignore)?")
 statuses = pickle.load(frawtweets)
 while statuses is not None:
 	for tweet in statuses:
-		tweet_text = tweet.user.name+": "+tweet.text+" (S/U)?"
+		tweet_text = tweet.user.name+": "+tweet.text+" (S/U/I)?"
 		s = raw_input(tweet_text.encode("UTF-8"))
 		if s == "S":
 			isSafe="Safe"
@@ -166,7 +166,8 @@ while statuses is not None:
 		tweet_vector = tweet_vector + ","+ str(hasProfanity(tweet_words))+ ","+ str(hasExplicit(tweet_words))+ ","+ str(hasHateSpeech(tweet_words))
 		tweet_vector = tweet_vector + ","+isSafe+"\n"
 		print tweet_vector
-		foutput.write(tweet_vector.encode("UTF-8"))
+		if s != "I":
+			foutput.write(tweet_vector.encode("UTF-8"))
 	statuses = pickle.load(frawtweets)
 foutput.close()
 frawtweets.close()
