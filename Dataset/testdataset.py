@@ -149,7 +149,7 @@ if foutput.tell()==0:
 	foutput.write("@ATTRIBUTE class \t{Safe, Unsafe}\n\n")
 	foutput.write("@DATA\n\n")
 
-print("Safe or Unsafe or Ignore (S/U/)?")
+print("Safe or Unsafe or Ignore (S/U/Ignore)?")
 statuses = pickle.load(frawtweets)
 while statuses is not None:
 	for tweet in statuses:
