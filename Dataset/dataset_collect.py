@@ -16,17 +16,20 @@ auth.set_access_token(access_token,access_secret)
 api = tweepy.API(auth)
 print "Authenticated"
 fusersfile = open('user-list.txt','r')		#User names list
-fuserdetail = open('user-details2.txt','a')	#details of user are stored in case we need it later
+fuserdetail = open('user-details.txt','a')	#details of user are stored in case we need it later
 pickle.HIGHEST_PROTOCOL
 frawtweets = open('raw-tweets.dat','a')		#the tweepy tweet object is directly saved into this file
 count = 1
 for user_name in fusersfile:
-	user=api.get_user(user_name)
-	pickle.dump(user,fuserdetail)
-	status_list=api.user_timeline(user_name)
-	pickle.dump(status_list,frawtweets)
-	print str(count) + ". " + user_name
-	count = count+1
+	try:
+		user=api.get_user(user_name)
+		pickle.dump(user,fuserdetail)
+		status_list=api.user_timeline(user_name)
+		pickle.dump(status_list,frawtweets)
+		print str(count) + ". " + user_name
+		count = count+1
+	except tweepy.error.TweepError,e:
+		print user_name + e.reason 
 fusersfile.close()
 frawtweets.close()
 fuserdetail.close()
