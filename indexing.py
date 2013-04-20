@@ -145,15 +145,23 @@ def emphExist(line):
 
 
 #replaces the word after removing repeated letters
-def emphReplace(word):
+def emphReplace(line):
+	words = re.findall(r'\w+', line,flags = re.UNICODE | re.LOCALE) 
+	for word in words:
+		new_word=emphReplaceWord(word)
+		line=line.replace(word,new_word)
+	return line
+
+
+def emphReplaceWord(word):
 	emp_regexp = re.compile(r'(\w*)(\w)\2(\w*)')
 	if wordnet.synsets(word):
 		return word
 	matched = emp_regexp.match(word)
-	if r is None:
+	if matched is None:
 		return word
 	word = matched.group(1)+matched.group(2)+matched.group(3)
-	return emphReplace(word)
+	return emphReplaceWord(word)
 
 #---------------------------------------------------------------------#
 #checks if the tweet is a retweet
@@ -245,6 +253,7 @@ print "Mentions: ", hasUsernames(tweet)
 tweet_text = tweet.text.lower()
 print "Emphasis: ", emphExist(tweet_text)
 print "Retweet: ", isRetweet(tweet)
+tweet_text = emphReplace(tweet_text)
 tweet_words = removeStopwords(tweet_text)
 print "Profanity: ", hasProfanity(tweet_words)
 print "Explicit: ", hasExplicit(tweet_words)
