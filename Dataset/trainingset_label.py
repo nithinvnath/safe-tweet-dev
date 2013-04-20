@@ -75,15 +75,24 @@ def emphExist(line):
 	return presence
 
 
-def emphReplace(word):
+def emphReplace(line):
+	words = re.findall(r'\w+', line,flags = re.UNICODE | re.LOCALE) 
+	for word in words:
+		new_word=emphReplaceWord(word)
+		line=line.replace(word,new_word)
+	return line
+
+
+def emphReplaceWord(word):
 	emp_regexp = re.compile(r'(\w*)(\w)\2(\w*)')
 	if wordnet.synsets(word):
 		return word
 	matched = emp_regexp.match(word)
-	if r is None:
+	if matched is None:
 		return word
 	word = matched.group(1)+matched.group(2)+matched.group(3)
-	return emphReplace(word)
+	return emphReplaceWord(word)
+
 
 
 def isRetweet(tweet):
@@ -135,6 +144,7 @@ def hasHateSpeech(words):
 
 frawtweets = open('raw-tweets2.dat','r')
 foutput = open('trainingdata1.arff','a')
+flabel = open('labels.txt','a')
 
 if foutput.tell()==0:
 	foutput.write("@RELATION safe-tweets\n\n")
@@ -168,6 +178,9 @@ while statuses is not None:
 		print tweet_vector
 		if s != "I":
 			foutput.write(tweet_vector.encode("UTF-8"))
+		else:
+			print"Ignored!"
+		flabel.write(s+"\n")
 	statuses = pickle.load(frawtweets)
 foutput.close()
 frawtweets.close()
