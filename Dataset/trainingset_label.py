@@ -11,11 +11,6 @@ from nltk.corpus import stopwords, wordnet
 from nltk.stem import WordNetLemmatizer
 from nltk.stem import PorterStemmer
 
-consumer_token = "pDeVZbNzK6HXocUuhwLqBg"
-consumer_secret = "Itj45FWSmMr0VmrNPJuO2KIaIt3hzayY2ywVteh2M"
-auth = tweepy.OAuthHandler(consumer_token,consumer_secret)
-auth_url = auth.get_authorization_url(signin_with_twitter=True)
-
 
 
 wnl = WordNetLemmatizer()
@@ -142,9 +137,9 @@ def hasHateSpeech(words):
 	return count
 
 
-frawtweets = open('raw-tweets2.dat','r')
-foutput = open('trainingdata1.arff','a')
-flabel = open('labels.txt','a')
+frawtweets = open('./Raw-Tweets/raw-tweets1.dat','r')
+foutput = open('trainingdata.arff','a')
+flabel = open('./Raw-Tweets/label1.txt','r')
 
 if foutput.tell()==0:
 	foutput.write("@RELATION safe-tweets\n\n")
@@ -162,27 +157,28 @@ if foutput.tell()==0:
 print("Safe or Unsafe or Ignore (S/U/Ignore)?")
 statuses = pickle.load(frawtweets)
 count = 0
-while statuses is not None and count < 50:
+while statuses is not None:
 	for tweet in statuses:
-		tweet_text = tweet.user.name+": "+tweet.text+" (S/U/I)?"
-		s = raw_input(tweet_text.encode("UTF-8"))
-		if s == "S":
-			isSafe="Safe"
-		else:
-			isSafe="Unsafe"
+		s = flabel.readline()
+		isSafe=s.strip()
+		if isSafe=="Ignore":
+			count = count + 1
+			print "Ignored"
+			continue
 		tweet_vector = str(hasUrl(tweet)) + "," + str(verifiedUser(tweet.user)) +"," +str(hasUsernames(tweet))
 		tweet_text = tweet.text
 		tweet_vector = tweet_vector +","+ str(emphExist(tweet_text)) + "," +str(isRetweet(tweet))
 		tweet_words = removeStopwords(tweet_text)
 		tweet_vector = tweet_vector + ","+ str(hasProfanity(tweet_words))+ ","+ str(hasExplicit(tweet_words))+ ","+ str(hasHateSpeech(tweet_words))
 		tweet_vector = tweet_vector + ","+isSafe+"\n"
-		print tweet_vector
-		if s != "I":
-			foutput.write(tweet_vector.encode("UTF-8"))
-		else:
-			print"Ignored!"
-		flabel.write(s+"\n")
+		print count, tweet.text, " "+tweet_vector
+		foutput.write(tweet_vector.encode("UTF-8"))
 		count = count + 1
-	statuses = pickle.load(frawtweets)
+	try:
+		statuses = pickle.load(frawtweets)
+	except EOFError:
+		print count, "Finished"
+		break
 foutput.close()
 frawtweets.close()
+flabel.close()

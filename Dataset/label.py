@@ -56,7 +56,11 @@ while ((statuses is not None) and (flag == 1)):
 				label="Ignore\n"
 		flabel.write(label)
 		count = count+1
-	statuses = pickle.load(frawtweets)
+	try:
+		statuses = pickle.load(frawtweets)
+	except EOFError:
+		print "\n********Completed********"
+		break
 	count=0
 	pos=pos+1
 

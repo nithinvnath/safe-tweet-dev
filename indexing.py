@@ -216,6 +216,7 @@ def hasHateSpeech(words):
 			count = count + 1
 	return count
 
+
 #---------------------------------------------------------------------#
 #The following regular expression checks for three groups
 #name followed by a colon, a tab and finally the tweet
