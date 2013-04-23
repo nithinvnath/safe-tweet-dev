@@ -161,7 +161,8 @@ if foutput.tell()==0:
 
 print("Safe or Unsafe or Ignore (S/U/Ignore)?")
 statuses = pickle.load(frawtweets)
-while statuses is not None:
+count = 0
+while statuses is not None and count < 50:
 	for tweet in statuses:
 		tweet_text = tweet.user.name+": "+tweet.text+" (S/U/I)?"
 		s = raw_input(tweet_text.encode("UTF-8"))
@@ -181,6 +182,7 @@ while statuses is not None:
 		else:
 			print"Ignored!"
 		flabel.write(s+"\n")
+		count = count + 1
 	statuses = pickle.load(frawtweets)
 foutput.close()
 frawtweets.close()
