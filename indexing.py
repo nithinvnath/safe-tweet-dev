@@ -217,6 +217,15 @@ def hasHateSpeech(words):
 	return count
 
 
+def hasPhoto(tweet):
+	try:
+		tweet.entities['media']
+		return 1
+	except:
+		return 0
+
+def retweetCount(tweet):
+	return tweet.retweet_count
 #---------------------------------------------------------------------#
 #The following regular expression checks for three groups
 #name followed by a colon, a tab and finally the tweet

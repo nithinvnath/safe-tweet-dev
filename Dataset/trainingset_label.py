@@ -105,7 +105,7 @@ def isRetweet(tweet):
 
 def hasProfanity(words):
 	count = 0
-	f = open('../Corpus/profanity.txt','r')
+	f = open('../Corpus/profanity-stemmed.txt','r')
 	lis = []
 	for badword in f:
 		lis.append(badword.strip())
@@ -116,7 +116,7 @@ def hasProfanity(words):
 
 def hasExplicit(words):
 	count = 0
-	f = open('../Corpus/explicit.txt','r')
+	f = open('../Corpus/explicit-stemmed.txt','r')
 	lis = []
 	for badword in f:
 		lis.append(badword.strip())
@@ -127,7 +127,7 @@ def hasExplicit(words):
 
 def hasHateSpeech(words):
 	count = 0
-	f = open('../Corpus/hate-speech.txt','r')
+	f = open('../Corpus/hate-speech-stemmed.txt','r')
 	lis = []
 	for badword in f:
 		lis.append(badword.strip())
@@ -136,10 +136,19 @@ def hasHateSpeech(words):
 			count = count + 1
 	return count
 
+def hasPhoto(tweet):
+	try:
+		tweet.entities['media']
+		return 1
+	except:
+		return 0
 
-frawtweets = open('./Raw-Tweets/raw-tweets1.dat','r')
+def retweetCount(tweet):
+	return tweet.retweet_count
+
+frawtweets = open('./Raw-Tweets/raw-tweets25.dat','r')
 foutput = open('trainingdata.arff','a')
-flabel = open('./Raw-Tweets/label1.txt','r')
+flabel = open('./Raw-Tweets/label25.txt','r')
 
 if foutput.tell()==0:
 	foutput.write("@RELATION safe-tweets\n\n")
@@ -151,6 +160,8 @@ if foutput.tell()==0:
 	foutput.write("@ATTRIBUTE Profanity \t NUMERIC \n")
 	foutput.write("@ATTRIBUTE Explicit \t NUMERIC \n")
 	foutput.write("@ATTRIBUTE HateSpeech \t NUMERIC \n")
+	foutput.write("@ATTRIBUTE hasPhoto \t NUMERIC \n")
+	foutput.write("@ATTRIBUTE RetweetCount \t NUMERIC \n")
 	foutput.write("@ATTRIBUTE class \t{Safe, Unsafe}\n\n")
 	foutput.write("@DATA\n\n")
 
@@ -170,6 +181,7 @@ while statuses is not None:
 		tweet_vector = tweet_vector +","+ str(emphExist(tweet_text)) + "," +str(isRetweet(tweet))
 		tweet_words = removeStopwords(tweet_text)
 		tweet_vector = tweet_vector + ","+ str(hasProfanity(tweet_words))+ ","+ str(hasExplicit(tweet_words))+ ","+ str(hasHateSpeech(tweet_words))
+		tweet_vector = tweet_vector +","+str(hasPhoto(tweet))+","+str(retweetCount(tweet))
 		tweet_vector = tweet_vector + ","+isSafe+"\n"
 		print count, tweet.text, " "+tweet_vector
 		foutput.write(tweet_vector.encode("UTF-8"))
