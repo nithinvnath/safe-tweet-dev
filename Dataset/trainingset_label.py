@@ -6,6 +6,9 @@ Assumes the tweets are of the form <username>: <tweet>"""
 import tweepy
 import cPickle as pickle
 
+import unicodedata
+import sys
+
 import re
 from nltk.corpus import stopwords, wordnet
 from nltk.stem import WordNetLemmatizer
@@ -33,6 +36,9 @@ def stemming(line):
 		#print replace_word	
 		line = line.replace(word,replace_word)
 	return line
+
+def removePunctuation(text):
+    return re.sub(ur"\p{P}+", "", text)
 
 
 def hasUrl (tweet):
@@ -143,12 +149,23 @@ def hasPhoto(tweet):
 	except:
 		return 0
 
+def hasBadWord(words):
+	count = 0
+	f = open('../Corpus/bad-words-stemmed.txt','r')
+	lis = []
+	for badword in f:
+		lis.append(badword.strip())
+	for badword in lis:
+		if badword in words:
+			count = count + 1
+	return count
+
 def retweetCount(tweet):
 	return tweet.retweet_count
 
-frawtweets = open('./Raw-Tweets/raw-tweets25.dat','r')
-foutput = open('trainingdata.arff','a')
-flabel = open('./Raw-Tweets/label25.txt','r')
+frawtweets = open('./Raw-Tweets/raw-tweets-porn.dat','r')
+foutput = open('trainingset.arff','a')
+flabel = open('./Raw-Tweets/label-porn.txt','r')
 
 if foutput.tell()==0:
 	foutput.write("@RELATION safe-tweets\n\n")
@@ -176,14 +193,16 @@ while statuses is not None:
 			count = count + 1
 			print "Ignored"
 			continue
+		tweet_text=removePunctuation(tweet.text.lower())
+		tweet_text=stemming(tweet_text)
 		tweet_vector = str(hasUrl(tweet)) + "," + str(verifiedUser(tweet.user)) +"," +str(hasUsernames(tweet))
-		tweet_text = tweet.text
+		#tweet_text = removePunctuation(tweet.text.lower())
 		tweet_vector = tweet_vector +","+ str(emphExist(tweet_text)) + "," +str(isRetweet(tweet))
 		tweet_words = removeStopwords(tweet_text)
 		tweet_vector = tweet_vector + ","+ str(hasProfanity(tweet_words))+ ","+ str(hasExplicit(tweet_words))+ ","+ str(hasHateSpeech(tweet_words))
 		tweet_vector = tweet_vector +","+str(hasPhoto(tweet))+","+str(retweetCount(tweet))
-		tweet_vector = tweet_vector + ","+isSafe+"\n"
-		print count, tweet.text, " "+tweet_vector
+		tweet_vector = tweet_vector + ","+isSafe+ "\n"
+		print count, tweet.text, " "+tweet_vector+"\n"+tweet_vector
 		foutput.write(tweet_vector.encode("UTF-8"))
 		count = count + 1
 	try:

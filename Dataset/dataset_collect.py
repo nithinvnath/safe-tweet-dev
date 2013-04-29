@@ -15,10 +15,10 @@ access_secret = "b6a6OHD39u1GNJMfkTp5LGRWCk7WWgTZgPkE6sgp8wo"
 auth.set_access_token(access_token,access_secret)
 api = tweepy.API(auth)
 print "Authenticated"
-fusersfile = open('user-list.txt','r')		#User names list
-fuserdetail = open('user-details.txt','a')	#details of user are stored in case we need it later
+fusersfile = open('user-list-porn.txt','r')		#User names list
+fuserdetail = open('user-details-porn.txt','a')	#details of user are stored in case we need it later
 pickle.HIGHEST_PROTOCOL
-frawtweets = open('raw-tweets.dat','a')		#the tweepy tweet object is directly saved into this file
+frawtweets = open('raw-tweets-porn.dat','a')		#the tweepy tweet object is directly saved into this file
 count = 1
 for user_name in fusersfile:
 	try:

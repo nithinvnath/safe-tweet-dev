@@ -84,6 +84,8 @@ def stemming(line):
 		line = line.replace(word,replace_word)
 	return line
 
+def removePunctuation(text):
+    return re.sub(ur"\p{P}+", "", text)
 
 #---------------------------------------------------------------------#
 #							INDEXING								  #
@@ -260,7 +262,7 @@ print tweet.text
 print "URL: ", hasUrl(tweet)
 print "User: ", verifiedUser(tweet.user)
 print "Mentions: ", hasUsernames(tweet)
-tweet_text = tweet.text.lower()
+tweet_text = removePunctuation(tweet.text.lower())
 print "Emphasis: ", emphExist(tweet_text)
 print "Retweet: ", isRetweet(tweet)
 tweet_text = emphReplace(tweet_text)
