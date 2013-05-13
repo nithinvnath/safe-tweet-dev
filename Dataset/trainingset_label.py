@@ -163,17 +163,17 @@ def hasBadWord(words):
 def retweetCount(tweet):
 	return tweet.retweet_count
 
-frawtweets = open('./Raw-Tweets/raw-tweets-porn.dat','r')
-foutput = open('trainingset.arff','a')
-flabel = open('./Raw-Tweets/label-porn.txt','r')
+frawtweets = open('./Raw-Tweets/raw-tweets23.dat','r')
+foutput = open('trainingset.arff','w')
+flabel = open('./Raw-Tweets/label23.txt','r')
 
 if foutput.tell()==0:
 	foutput.write("@RELATION safe-tweets\n\n")
-	foutput.write("@ATTRIBUTE hasUrl \t NUMERIC \n")
+	# foutput.write("@ATTRIBUTE hasUrl \t NUMERIC \n")
 	foutput.write("@ATTRIBUTE verifiedUser \t NUMERIC \n")
-	foutput.write("@ATTRIBUTE Mentions \t NUMERIC \n")
-	foutput.write("@ATTRIBUTE Emphasis \t NUMERIC \n")
-	foutput.write("@ATTRIBUTE Retweet \t NUMERIC \n")
+	# foutput.write("@ATTRIBUTE Mentions \t NUMERIC \n")
+	# foutput.write("@ATTRIBUTE Emphasis \t NUMERIC \n")
+	# foutput.write("@ATTRIBUTE Retweet \t NUMERIC \n")
 	foutput.write("@ATTRIBUTE Profanity \t NUMERIC \n")
 	foutput.write("@ATTRIBUTE Explicit \t NUMERIC \n")
 	foutput.write("@ATTRIBUTE HateSpeech \t NUMERIC \n")
@@ -193,16 +193,19 @@ while statuses is not None:
 			count = count + 1
 			print "Ignored"
 			continue
+		#isSafe="?"
 		tweet_text=removePunctuation(tweet.text.lower())
+		tweet_text=tweet_text+" "+tweet.user.name.lower()
 		tweet_text=stemming(tweet_text)
-		tweet_vector = str(hasUrl(tweet)) + "," + str(verifiedUser(tweet.user)) +"," +str(hasUsernames(tweet))
+		#tweet_vector = str(hasUrl(tweet)) + "," 
+		tweet_vector=str(verifiedUser(tweet.user)) #+"," +str(hasUsernames(tweet))
 		#tweet_text = removePunctuation(tweet.text.lower())
-		tweet_vector = tweet_vector +","+ str(emphExist(tweet_text)) + "," +str(isRetweet(tweet))
+		#tweet_vector = tweet_vector +","+ str(emphExist(tweet_text)) + "," +str(isRetweet(tweet))
 		tweet_words = removeStopwords(tweet_text)
 		tweet_vector = tweet_vector + ","+ str(hasProfanity(tweet_words))+ ","+ str(hasExplicit(tweet_words))+ ","+ str(hasHateSpeech(tweet_words))
 		tweet_vector = tweet_vector +","+str(hasPhoto(tweet))+","+str(retweetCount(tweet))
-		tweet_vector = tweet_vector + ","+isSafe+ "\n"
-		print count, tweet.text, " "+tweet_vector+"\n"+tweet_vector
+		tweet_vector = tweet_vector + "," +isSafe+ "\n"
+		#print count, tweet.text, " "+tweet_vector+"\n"+tweet_vector
 		foutput.write(tweet_vector.encode("UTF-8"))
 		count = count + 1
 	try:

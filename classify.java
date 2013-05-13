@@ -14,12 +14,12 @@ public class classify
  
     public static void main(String[] args) throws Exception
     {
-        DataSource source = new DataSource("./Dataset/trainingset.arff");
-        Instances data = source.getDataSet();
-        if (data.classIndex() == -1)
-            data.setClassIndex(data.numAttributes() - 1);
+        // DataSource source = new DataSource("./Dataset/trainingset_corp.arff");
+        // Instances data = source.getDataSet();
+        // if (data.classIndex() == -1)
+        //     data.setClassIndex(data.numAttributes() - 1);
 
-        data.setClassIndex(data.numAttributes() - 1);
+        // data.setClassIndex(data.numAttributes() - 1);
 
         //create a classifier and set options.
         /* Classifier svm =(Classifier) new SMO();
@@ -27,9 +27,9 @@ public class classify
         svm.setOptions(weka.core.Utils.splitOptions("weka.classifiers.functions.SMO -C 4.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K \"weka.classifiers.functions.supportVector.RBFKernel -C 250007 -G 0.5\""));
         */
 
-        Classifier svm = (Classifier) weka.core.SerializationHelper.read(new FileInputStream("classifier_smo.model"));
+        Classifier svm = (Classifier) weka.core.SerializationHelper.read(new FileInputStream("SMO_final.model"));
 
-        DataSource testSource = new DataSource("./Dataset/testset.arff");
+        DataSource testSource = new DataSource("./Dataset/toClassify.arff");
         Instances unlabeled = testSource.getDataSet();
         //set class attribute
         unlabeled.setClassIndex(unlabeled.numAttributes() - 1);
@@ -45,11 +45,12 @@ public class classify
         }
 
         BufferedWriter writer = new BufferedWriter(
-                           new FileWriter("./Dataset/test_labeled.arff"));
+                           new FileWriter("./Dataset/labeled.arff"));
         writer.write(labeled.toString());
         writer.newLine();
         writer.flush();
         writer.close();
+        System.out.println("Classification complete.");
         /*Evaluation eval = new Evaluation(data);
         Random rand = new Random(1);  // using seed = 1
         int folds = 10;
